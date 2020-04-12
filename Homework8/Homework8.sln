@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework8", "Homework8.csproj", "{0195FF3C-1124-4D8D-A232-B7A3F6B4DC6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApp", "..\Homework6\project_orderSerialize\OrderApp.csproj", "{CA98A8E0-9173-4C2A-8629-C3A8512286C5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0195FF3C-1124-4D8D-A232-B7A3F6B4DC6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0195FF3C-1124-4D8D-A232-B7A3F6B4DC6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0195FF3C-1124-4D8D-A232-B7A3F6B4DC6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0195FF3C-1124-4D8D-A232-B7A3F6B4DC6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA98A8E0-9173-4C2A-8629-C3A8512286C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA98A8E0-9173-4C2A-8629-C3A8512286C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA98A8E0-9173-4C2A-8629-C3A8512286C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA98A8E0-9173-4C2A-8629-C3A8512286C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9B7C791-38AF-4E7B-920F-180DFAA61EE4}
+	EndGlobalSection
+EndGlobal

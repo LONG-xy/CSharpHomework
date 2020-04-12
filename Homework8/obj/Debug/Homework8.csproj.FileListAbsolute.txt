@@ -1,0 +1,14 @@
+C:\Users\xy\source\repos\Homework8\bin\Debug\Homework8.exe.config
+C:\Users\xy\source\repos\Homework8\bin\Debug\Homework8.exe
+C:\Users\xy\source\repos\Homework8\bin\Debug\Homework8.pdb
+C:\Users\xy\source\repos\Homework8\bin\Debug\OrderApp.exe
+C:\Users\xy\source\repos\Homework8\bin\Debug\OrderApp.pdb
+C:\Users\xy\source\repos\Homework8\bin\Debug\OrderApp.exe.config
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.csprojAssemblyReference.cache
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.Form1.resources
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.Form2.resources
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.Properties.Resources.resources
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.csproj.GenerateResource.cache
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.csproj.CopyComplete
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.exe
+C:\Users\xy\source\repos\Homework8\obj\Debug\Homework8.pdb

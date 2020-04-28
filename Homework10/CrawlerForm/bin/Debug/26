@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>锅外的大佬 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/liululee/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/liululee/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/liululee/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 516787;
+        var currentBlogApp = 'liululee';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/liululee/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/liululee/">锅外的大佬</a>
+</h1>
+<h2>
+每日推送国外优秀的技术翻译文章，励志帮助国内的开发者更好地成长！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/liululee/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%94%85%E5%A4%96%E7%9A%84%E5%A4%A7%E4%BD%AC">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/liululee/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+68&nbsp; </span>
+<span id="stats_article_count">文章 - 
+1&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+13</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2020/04/20.html">2020年4月20日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/12735762.html">
+    如何有效的读一本书？各位读书人，确定自己真的会读书吗？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：不知道大家有没有这样的经历，经常想要看完一本书，却总是半途而废。哪怕最后硬着头皮看完，也感觉收获无几。 如果你有这种情况，那么，你并未掌握读书的方法和技巧，你只是学会了“看书看文字”而已。如果你不及时调整自己的读书方法，继续这样“看书”，那还不如翻翻新华字典，起码还可以认识几个新字。 1.看书和读书            <a href="https://www.cnblogs.com/liululee/p/12735762.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-20 08:51 锅外的大佬 阅读 (62) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735762" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2020/04/15.html">2020年4月15日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/12702993.html">
+    NullPointerException的处理新方式，Java14真的太香了
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：在Java语言中，处理空指针往往是一件很头疼的事情，一不小心，说不定就搞出个线上Bug，让你的绩效考核拿到3.25。最近新出的Java14，相信大家都有所耳闻，那么今天就来看看，面对NullPointerException，Java14有哪些更好的处理方式呢？ 1.传统的 NullPointerEx            <a href="https://www.cnblogs.com/liululee/p/12702993.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-04-15 08:52 锅外的大佬 阅读 (80) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12702993" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2020/03/30.html">2020年3月30日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/12596473.html">
+    ThreadPoolTaskExecutor 中 corePoolSize vs. maxPoolSize
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 概览 Spring中的 &quot; ThreadPoolTaskExecutor &quot; 是一个 JavaBean ，提供围绕 &quot; java.util.concurrent.ThreadPoolExecutor &quot; 的抽象实例，并作为Spring 中 &quot; org.springframework.core.            <a href="https://www.cnblogs.com/liululee/p/12596473.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2020-03-30 08:51 锅外的大佬 阅读 (95) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12596473" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/12/01.html">2019年12月1日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11968258.html">
+    不管你年底换不换工作，了解下单例模式
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 单例模式 什么是单例模式？简言之就是确保定义为单例模式的类在程序中有且只有一个实例。单例模式的特点： 1. 只有一个实例 （只能有一个对象被创建） 2. 自我实例化（类构造器私有） 3. 对外提供获取实例的静态方法 2.单例模式的实现 常见的单例模式实现方式有五种： 2.1. 懒汉式 懒汉式（            <a href="https://www.cnblogs.com/liululee/p/11968258.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-12-01 23:00 锅外的大佬 阅读 (465) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11968258" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/11/27.html">2019年11月27日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11943720.html">
+    微服务中的Kafka与Micronaut
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：今天，我们将通过 主题构建一些彼此异步通信的微服务。我们使用 框架，它为与 集成提供专门的库。让我们简要介绍一下示例系统的体系结构。我们有四个微型服务： ，`行程服务 司机服务 乘客服务 Kafka`实例。 我们系统的主要目标是为客户安排行程。订单服务应用程序还充当网关。它接收来自客户的请求，保存历            <a href="https://www.cnblogs.com/liululee/p/11943720.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-27 17:08 锅外的大佬 阅读 (356) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11943720" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/11/25.html">2019年11月25日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11925987.html">
+    Spring Boot: Spring Doc生成OpenAPI3.0文档
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 概述 公司正好最近在整理项目的文档，且文档对于构建REST API来说是至关重要的。在这篇文章中，我将介绍 ， 一个基于 规范简化了 和`2.x`应用程序的API文档的生成和维护的工具。 2. 设置springdoc openapi 如果想让 &quot;springdoc openapi&quot; 为我们的A            <a href="https://www.cnblogs.com/liululee/p/11925987.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-25 09:42 锅外的大佬 阅读 (1381) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11925987" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/11/13.html">2019年11月13日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11846542.html">
+    用Java实现简单的区块链
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：用 Java 实现简单的区块链 1. 概述 本文中，我们将学习区块链技术的基本概念。也将根据概念使用 Java 来实现一个基本的应用程序。 进一步，我们将讨论一些先进的概念以及该技术的实际应用。 2. 什么是区块链？ 因此，让我们首先了解到底什么是区块链... 它的起源可以追溯到2008年 &quot;Sat            <a href="https://www.cnblogs.com/liululee/p/11846542.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-13 07:48 锅外的大佬 阅读 (458) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11846542" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/11/05.html">2019年11月5日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11801781.html">
+    谁说搞Java的不能玩机器学习？
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：简介 机器学习在全球范围内越来越受欢迎和使用。 它已经彻底改变了某些应用程序的构建方式，并且可能会继续成为我们日常生活中一个巨大的（并且正在增加的）部分。 没有什么包装且机器学习并不简单。 它对许多人来说似乎非常复杂并常常令人生畏。 像谷歌这样的公司将自己的机器学习概念与开发人员联系起来，在谷歌帮助            <a href="https://www.cnblogs.com/liululee/p/11801781.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-11-05 21:32 锅外的大佬 阅读 (492) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11801781" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/10/24.html">2019年10月24日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11730484.html">
+    Spring Boot 配置元数据指南
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：1. 概览 在编写 Spring Boot 应用程序时， &quot;将配置属性映射到 Java bean 上&quot; 是非常有用的。但是，记录这些属性的最好方法是什么呢？ 在本教程中，我们将探讨 &quot;Spring Boot Configuration Processor&quot; 和 &quot;关联的 JSON 元数据文件&quot; ，该            <a href="https://www.cnblogs.com/liululee/p/11730484.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-24 09:51 锅外的大佬 阅读 (264) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11730484" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+		
+
+
+<div class="day">
+    <div class="dayTitle">
+        <a href="https://www.cnblogs.com/liululee/archive/2019/10/22.html">2019年10月22日</a>
+    </div>
+
+        <div class="postTitle">
+            
+
+<a class="postTitle2" href="https://www.cnblogs.com/liululee/p/11719378.html">
+    注解在Java中是如何工作的?
+</a>
+
+        </div>
+        <div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：来一点咖啡，准备好进入注解的世界。 注解一直是 Java 的一个非常重要的部分，它从 J2SE 5.0 开始就已经存在了。在我们的应用程序代码中，经常看到 和 这样的注解。在本文中，我将讨论注解到底是什么，为什么引入注解，它们是如何工作的，如何编写自定义注解(有示例代码)，注解的有效场景是什么，最后            <a href="https://www.cnblogs.com/liululee/p/11719378.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+        <div class="clear"></div>
+        <div class="postDesc">
+
+posted @ 2019-10-22 13:53 锅外的大佬 阅读 (218) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11719378" rel="nofollow">
+    编辑
+</a>
+</div>
+        <div class="clear"></div>
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/liululee/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 锅外的大佬
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

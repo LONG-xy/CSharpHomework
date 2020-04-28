@@ -1,0 +1,962 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>寒空飞箭 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/summergarden/bundle-summergarden.min.css?v=VU1dFS4587gn2X8grE6LlrhwScli3SW5N_Dod2a5NAU" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/summergarden/bundle-summergarden-mobile.min.css?v=qqfeWJjwG2yHc4G3o4D_aAh8NdA2Uspy5vjuqwOEq0c" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/coldairarrow/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/coldairarrow/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/coldairarrow/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 345024;
+        var currentBlogApp = 'coldairarrow';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'summerGarden';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/coldairarrow/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/coldairarrow/">寒空飞箭</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+
+			<ul id="navList">
+				<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+				<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/coldairarrow/">
+首页</a>
+</li>
+				<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+				<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%AF%92%E7%A9%BA%E9%A3%9E%E7%AE%AD">
+联系</a></li>
+				<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+				<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/coldairarrow/rss/">
+订阅</a>
+				
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/coldairarrow/rss/">
+    <img src="/skins/summergarden/images/xml.gif" alt="订阅" />
+</a></li>
+			</ul>
+
+
+
+		<div class="blogStats">
+			
+			<!--done-->
+随笔 - 
+14&nbsp;
+文章 - 
+0&nbsp;
+评论 - 
+424&nbsp;
+
+
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<!--done-->
+
+
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2020/04/20.html">
+2020年4月20日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/12733886.html">
+[置顶]    EFCore.Sharding(EFCore开源分表框架)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET .NET Core EF Core Sharding            <a href="https://www.cnblogs.com/coldairarrow/p/12733886.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2020-04-20 07:53 寒空飞箭 阅读 (252) 评论 (6)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12733886" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/11/18.html">
+2019年11月18日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11870993.html">
+[置顶]    .NET Core前后端分离快速开发框架(Core.3.1+AntdVue)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET Core前后端分离快速开发框架(Core.3.1+AntdVue) &quot;引言&quot; &quot;简介&quot; &quot;环境搭建&quot; &quot;开发环境要求：&quot; &quot;基础数据库构建：&quot; &quot;数据库设计规范&quot; &quot;运行&quot; &quot;使用教程&quot; &quot;系统配置&quot; &quot;快速开发&quot; &quot;管理员登录&quot; &quot;系统用户管理&quot; &quot;系统角色管理&quot; &quot;权限管理&quot; &quot;接口秘            <a href="https://www.cnblogs.com/coldairarrow/p/11870993.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-11-18 08:20 寒空飞箭 阅读 (17859) 评论 (118)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11870993" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/09/12.html">
+2019年9月12日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11509881.html">
+[置顶]    .NET 分布式自增Id组件（解决自动分配机器Id、时间回拨问题）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET 分布式自增Id生成组件，基于雪花Id改进版，简洁易用            <a href="https://www.cnblogs.com/coldairarrow/p/11509881.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-09-12 08:22 寒空飞箭 阅读 (3031) 评论 (30)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11509881" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/08/12.html">
+2019年8月12日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11336771.html">
+[置顶]    简洁实用Socket框架DotNettySocket
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：目录 &quot;简介&quot; &quot;产生背景&quot; &quot;使用方式&quot; &quot;TcpSocket&quot; &quot;WebSocket&quot; &quot;UdpSocket&quot; &quot;结尾&quot; 简介 DotNettySocket是一个.NET跨平台Socket框架（支持.NET4.5+及.NET Standard2.0+），同时支持TcpSocket、WebSock            <a href="https://www.cnblogs.com/coldairarrow/p/11336771.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-08-12 08:28 寒空飞箭 阅读 (2829) 评论 (10)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11336771" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/06/24.html">
+2019年6月24日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11075037.html">
+[置顶]    Colder框架硬核更新（Sharding+IOC）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：目录 &quot;引言&quot; &quot;控制反转&quot; &quot;读写分离分库分表&quot; &quot;理论基础&quot; &quot;设计目标&quot; &quot;现状调研&quot; &quot;设计思路&quot; &quot;实现之过五关斩六将&quot; &quot;动态对象&quot; &quot;动态模型缓存&quot; &quot;数据源移植&quot; &quot;查询表达式树深度移植&quot; &quot;数据合并算法&quot; &quot;事务支持&quot; &quot;实际使用&quot; &quot;展望未来&quot; 引言 前方硬核警告：全文干货110            <a href="https://www.cnblogs.com/coldairarrow/p/11075037.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-06-24 07:29 寒空飞箭 阅读 (1427) 评论 (8)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11075037" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/03/11.html">
+2019年3月11日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10507136.html">
+[置顶]    .NET Core开源快速开发框架Colder发布 (NET Core2.1+AdminLTE版)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：引言 ==== 上星期发布的.NET452+AdminLTE版框架得到了大家的大力支持，目前GitHub已获近100星，鄙人十分高兴能够帮助大家。其中有不少关心.NET Core的支持情况，因为未来的.NET平台是属于.NET Core的，为此，鄙人花了一星期将代码移植到.NET Core2.1，不            <a href="https://www.cnblogs.com/coldairarrow/p/10507136.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-03-11 09:12 寒空飞箭 阅读 (12523) 评论 (14)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10507136" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/03/07.html">
+2019年3月7日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10486184.html">
+[置顶]    .NET开源快速开发框架Colder发布 (NET452+AdminLTE版)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET开源快速开发框架Colder(NET452+AdminLTE版) 引言 ==== 半年前将基于Easyui的快速开发框架开源，三个版本（NET4.52，NETCore和NET4.0）总共荣获200+星，得到了大家的认可，也很高兴能够帮助到大家。但不可否认的是Easyui在现在各大主流UI框架            <a href="https://www.cnblogs.com/coldairarrow/p/10486184.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-03-07 08:47 寒空飞箭 阅读 (12961) 评论 (73)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10486184" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/12/29.html">
+2018年12月29日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10193765.html">
+[置顶]    .NET 跨平台RPC框架DotNettyRPC
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：DotNettyRPC 1.简介 DotNettyRPC是一个基于DotNetty的跨平台RPC框架，支持.NET45以及.NET Standard2.0 2.产生背景 传统.NET开发中遇到远程调用服务时，多以WCF为主。而WCF虽然功能强大，但是其配置复杂，不易于上手。而且未来必定是.NET C            <a href="https://www.cnblogs.com/coldairarrow/p/10193765.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-12-29 09:05 寒空飞箭 阅读 (3797) 评论 (40)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10193765" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/09/13.html">
+2018年9月13日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/9641360.html">
+[置顶]    Web后台快速开发框架（.NET Core）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Web后台快速开发框架（.NET Core） Coldairarrow 目录 目录 第1章 目录 1 第2章 简介 3 第3章 基础准备 4 3.1 开发环境要求 4 3.2 基础数据库构建 4 3.3 运行 5 第4章 详细教程 7 4.1 代码架构 7 4.1.1总体架构 7 4.1.2基础设施            <a href="https://www.cnblogs.com/coldairarrow/p/9641360.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-09-13 16:28 寒空飞箭 阅读 (24724) 评论 (30)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9641360" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/09/11.html">
+2018年9月11日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/9626691.html">
+[置顶]    Web后台快速开发框架
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Web后台快速开发框架 Coldairarrow 目录 目录 第1章 目录 1 第2章 简介 3 第3章 基础准备 4 3.1 开发环境要求 4 3.2 基础数据库构建 4 3.3 运行 5 第4章 详细教程 6 4.1 代码架构 6 4.1.1总体架构 6 4.1.2基础设施层 7 4.1.3数据            <a href="https://www.cnblogs.com/coldairarrow/p/9626691.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-09-11 11:48 寒空飞箭 阅读 (28094) 评论 (82)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9626691" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2017/11/09.html">
+2017年11月9日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/7811530.html">
+[置顶]    EasyWcf------无需配置，无需引用，动态绑定，轻松使用
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：设计原则：万物皆对象 前言：在上一篇的0配置使用Wcf中，虽然使用已经很方便了，但是对于最求极致简洁得人来说（比如我），客户端需要通过手动引用服务才能够调用服务接口，那么有没有办法能够绕过手动引用这一步，并且直接通过调用地址使用呢？答案肯定是有的，不然我这篇文章就毫无意义了，而我是从来不做无意义之事            <a href="https://www.cnblogs.com/coldairarrow/p/7811530.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2017-11-09 21:24 寒空飞箭 阅读 (622) 评论 (2)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7811530" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2017/09/10.html">
+2017年9月10日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/7502397.html">
+[置顶]    C# .NET 0配置使用Wcf(半成品)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：设计原则：万物皆对象 背景：微软提供了一套强大的通信框架Wcf，了解请看百度百科：ttps://baike.baidu.com/item/Wcf/7374854?fr=aladdin 虽然这套通信框架很强大，但是配置起来也不简单，因此导致很多人望而却步（包括我），我这人向来不喜欢麻烦，喜欢简单，最好            <a href="https://www.cnblogs.com/coldairarrow/p/7502397.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2017-09-10 21:31 寒空飞箭 阅读 (637) 评论 (1)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7502397" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2020/04/20.html">
+2020年4月20日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/12733886.html">
+    EFCore.Sharding(EFCore开源分表框架)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET .NET Core EF Core Sharding            <a href="https://www.cnblogs.com/coldairarrow/p/12733886.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2020-04-20 07:53 寒空飞箭 阅读 (303) 评论 (6)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12733886" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/11/18.html">
+2019年11月18日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11870993.html">
+    .NET Core前后端分离快速开发框架(Core.3.1+AntdVue)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET Core前后端分离快速开发框架(Core.3.1+AntdVue) &quot;引言&quot; &quot;简介&quot; &quot;环境搭建&quot; &quot;开发环境要求：&quot; &quot;基础数据库构建：&quot; &quot;数据库设计规范&quot; &quot;运行&quot; &quot;使用教程&quot; &quot;系统配置&quot; &quot;快速开发&quot; &quot;管理员登录&quot; &quot;系统用户管理&quot; &quot;系统角色管理&quot; &quot;权限管理&quot; &quot;接口秘            <a href="https://www.cnblogs.com/coldairarrow/p/11870993.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-11-18 08:20 寒空飞箭 阅读 (17867) 评论 (118)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11870993" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/09/12.html">
+2019年9月12日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11509881.html">
+    .NET 分布式自增Id组件（解决自动分配机器Id、时间回拨问题）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET 分布式自增Id生成组件，基于雪花Id改进版，简洁易用            <a href="https://www.cnblogs.com/coldairarrow/p/11509881.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-09-12 08:22 寒空飞箭 阅读 (3031) 评论 (30)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11509881" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/08/12.html">
+2019年8月12日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11336771.html">
+    简洁实用Socket框架DotNettySocket
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：目录 &quot;简介&quot; &quot;产生背景&quot; &quot;使用方式&quot; &quot;TcpSocket&quot; &quot;WebSocket&quot; &quot;UdpSocket&quot; &quot;结尾&quot; 简介 DotNettySocket是一个.NET跨平台Socket框架（支持.NET4.5+及.NET Standard2.0+），同时支持TcpSocket、WebSock            <a href="https://www.cnblogs.com/coldairarrow/p/11336771.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-08-12 08:28 寒空飞箭 阅读 (2830) 评论 (10)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11336771" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/06/24.html">
+2019年6月24日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/11075037.html">
+    Colder框架硬核更新（Sharding+IOC）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：目录 &quot;引言&quot; &quot;控制反转&quot; &quot;读写分离分库分表&quot; &quot;理论基础&quot; &quot;设计目标&quot; &quot;现状调研&quot; &quot;设计思路&quot; &quot;实现之过五关斩六将&quot; &quot;动态对象&quot; &quot;动态模型缓存&quot; &quot;数据源移植&quot; &quot;查询表达式树深度移植&quot; &quot;数据合并算法&quot; &quot;事务支持&quot; &quot;实际使用&quot; &quot;展望未来&quot; 引言 前方硬核警告：全文干货110            <a href="https://www.cnblogs.com/coldairarrow/p/11075037.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-06-24 07:29 寒空飞箭 阅读 (1427) 评论 (8)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11075037" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/03/11.html">
+2019年3月11日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10507136.html">
+    .NET Core开源快速开发框架Colder发布 (NET Core2.1+AdminLTE版)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：引言 ==== 上星期发布的.NET452+AdminLTE版框架得到了大家的大力支持，目前GitHub已获近100星，鄙人十分高兴能够帮助大家。其中有不少关心.NET Core的支持情况，因为未来的.NET平台是属于.NET Core的，为此，鄙人花了一星期将代码移植到.NET Core2.1，不            <a href="https://www.cnblogs.com/coldairarrow/p/10507136.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-03-11 09:12 寒空飞箭 阅读 (12524) 评论 (14)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10507136" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2019/03/07.html">
+2019年3月7日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10486184.html">
+    .NET开源快速开发框架Colder发布 (NET452+AdminLTE版)
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：.NET开源快速开发框架Colder(NET452+AdminLTE版) 引言 ==== 半年前将基于Easyui的快速开发框架开源，三个版本（NET4.52，NETCore和NET4.0）总共荣获200+星，得到了大家的认可，也很高兴能够帮助到大家。但不可否认的是Easyui在现在各大主流UI框架            <a href="https://www.cnblogs.com/coldairarrow/p/10486184.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2019-03-07 08:47 寒空飞箭 阅读 (12961) 评论 (73)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10486184" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/12/29.html">
+2018年12月29日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/10193765.html">
+    .NET 跨平台RPC框架DotNettyRPC
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：DotNettyRPC 1.简介 DotNettyRPC是一个基于DotNetty的跨平台RPC框架，支持.NET45以及.NET Standard2.0 2.产生背景 传统.NET开发中遇到远程调用服务时，多以WCF为主。而WCF虽然功能强大，但是其配置复杂，不易于上手。而且未来必定是.NET C            <a href="https://www.cnblogs.com/coldairarrow/p/10193765.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-12-29 09:05 寒空飞箭 阅读 (3797) 评论 (40)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10193765" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/09/13.html">
+2018年9月13日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/9641360.html">
+    Web后台快速开发框架（.NET Core）
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Web后台快速开发框架（.NET Core） Coldairarrow 目录 目录 第1章 目录 1 第2章 简介 3 第3章 基础准备 4 3.1 开发环境要求 4 3.2 基础数据库构建 4 3.3 运行 5 第4章 详细教程 7 4.1 代码架构 7 4.1.1总体架构 7 4.1.2基础设施            <a href="https://www.cnblogs.com/coldairarrow/p/9641360.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-09-13 16:28 寒空飞箭 阅读 (24724) 评论 (30)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9641360" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+		
+
+<div class="day">
+	<div class="dayTitle">
+		<a href="https://www.cnblogs.com/coldairarrow/archive/2018/09/11.html">
+2018年9月11日</a>				  
+	</div>
+
+	
+			<div class="postTitle">
+				
+
+<a class="postTitle2" href="https://www.cnblogs.com/coldairarrow/p/9626691.html">
+    Web后台快速开发框架
+</a>
+
+			</div>
+			<div class="postCon">
+
+    <div class="c_b_p_desc">
+摘要：Web后台快速开发框架 Coldairarrow 目录 目录 第1章 目录 1 第2章 简介 3 第3章 基础准备 4 3.1 开发环境要求 4 3.2 基础数据库构建 4 3.3 运行 5 第4章 详细教程 6 4.1 代码架构 6 4.1.1总体架构 6 4.1.2基础设施层 7 4.1.3数据            <a href="https://www.cnblogs.com/coldairarrow/p/9626691.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+</div>
+			<div class="clear"></div>
+			<div class="postDesc">
+
+posted @ 2018-09-11 11:48 寒空飞箭 阅读 (28094) 评论 (82)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=9626691" rel="nofollow">
+    编辑
+</a>
+</div>
+			<div class="clear"></div>
+
+</div>
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/coldairarrow/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="calendar"><div id="blog-calendar" style="display:none"></div></div>                
+                    <script>loadBlogDefaultCalendar();</script></div>
+			
+			<DIV id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</DIV>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 寒空飞箭
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

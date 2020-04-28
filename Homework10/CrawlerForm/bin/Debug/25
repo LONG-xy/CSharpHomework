@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="不知道大家有没有这样的经历，经常想要看完一本书，却总是半途而废。哪怕最后硬着头皮看完，也感觉收获无几。 如果你有这种情况，那么，你并未掌握读书的方法和技巧，你只是学会了“看书看文字”而已。如果你不及时" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>如何有效的读一本书？各位读书人，确定自己真的会读书吗？ - 锅外的大佬 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/liululee/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/liululee/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/liululee/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 516787;
+        var currentBlogApp = 'liululee';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/liululee/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/liululee/">锅外的大佬</a>
+</h1>
+<h2>
+每日推送国外优秀的技术翻译文章，励志帮助国内的开发者更好地成长！
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/liululee/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E9%94%85%E5%A4%96%E7%9A%84%E5%A4%A7%E4%BD%AC">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/liululee/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+68&nbsp; </span>
+<span id="stats_article_count">文章 - 
+1&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+13</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/liululee/p/12735762.html">如何有效的读一本书？各位读书人，确定自己真的会读书吗？</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>不知道大家有没有这样的经历，经常想要看完一本书，却总是半途而废。哪怕最后硬着头皮看完，也感觉收获无几。</p>
+<p>如果你有这种情况，那么，你并未掌握读书的方法和技巧，你只是学会了“看书看文字”而已。如果你不及时调整自己的读书方法，继续这样“看书”，那还不如翻翻新华字典，起码还可以认识几个新字。</p>
+<h2 id="1看书和读书">1.看书和读书</h2>
+<p>看书和读书是完全不同的状态，看书很简单，就像看小说，看电视，一遍过去，再过一段时间回忆，基本已经忘光了。</p>
+<p>而读书则不尽相同，读书需细细品味。在阅读的过程中，产生自己的理解和思考，能理解或者记忆大部分的要点内容。这就是看书和读书本质上的区别。</p>
+<h2 id="2-要怎么读书">2. 要怎么读书</h2>
+<h3 id="21-怎么读纸质书">2.1 怎么读纸质书</h3>
+<p>有朋友问我，要怎么才能算读书呢，读书有什么方法呢？我个人认为：</p>
+<p>首先，读书不应当求快，有些人买书一次性买个七八本，给自己做好规划，这个月读完这本，下月读完那本。我觉得实在是没有必要。事实上也没人和你比赛，但有些人就是想快点把书看完，这样的行为不可取。</p>
+<p>其次，读书应当适当做些笔记，对于书中的概念性的东西，可以划一条直线。一些重点内容，你可以划波浪线，甚至可以用圆圈，五角星标记一些更重要的东西。</p>
+<p>或者，我还是建议你最好备用着便利贴。对于刚开始想要改变自己的人来说，便利贴对阅读质量提升大有好处。当你读到一些好的文字，可以适当的摘抄下来，当你有一些灵感和思考时，可以适当的记录下来。</p>
+<p>最后，我建议你，一本好书，要经常翻阅，温故而知新，经过一段时间的历练，你的眼界和胸怀再来看这本书，定然会有不一样的感受。</p>
+<h3 id="22-电子书怎么办">2.2 电子书怎么办</h3>
+<p>现在很多朋友获取知识的地方大多数来源于网络，以及各类读书APP。那么，问题来了，电子版怎么用便利贴呢？<br>
+事实上，我们也可以做一些电子笔记。如你可以写一个word文档，记录每一章节大致的内容和自己的思考，下面是我看《 图解HTTP》 的笔记截图：<br>
+<img src="https://img2020.cnblogs.com/other/1692986/202004/1692986-20200420085046751-1420967849.png" alt="读图解HTTP"></p>
+<h3 id="23-做笔记值得吗？">2.3 做笔记值得吗？</h3>
+<p>很多人会觉得，做笔记是一件很麻烦的事情。事实上，我也很怕麻烦，但有句老话：“好记性不如烂笔头”。正如同登山，坐缆车和徒步，看到的风景，它能是一样的吗？这种亲手写下摘要和读后感的过程也绝不是简单的“流水账式操作”，写完之后就可以扔掉的。<strong>这些宝贵的内容，说不定正是将来某一天你能够派上用场的的知识储备。</strong></p>
+<p>把灵感记录在纸上，让思考书面化，让灵感脱离之前的抽象状态，会更容易将其理解消化，也能促使你把灵感用作创意材料，想用的时候就能信手拈来。</p>
+<h2 id="3-笔记做好就够了吗？">3. 笔记做好就够了吗？</h2>
+<p>NO,NO,NO! 否认三连！学会做笔记，做好读书笔记，会让你对书中的印象更加深刻，但做好笔记只是你学会读书的第一步。读书笔记并不是写完放好就万事大吉了。如果在读书时发现了感兴趣的内容，就应该扎实地多看几遍，偶尔还需要把读书笔记完完整整地翻一遍，了解自己到目前为止都读了什么书。</p>
+<p>做笔记的真正目的是 <strong>“通过重读笔记提升自我”</strong>。读书的最终目的就是“活用”，或者称为：“学以致用”。笔记是一种思维工具，帮助你实现从读书到独创的思维飞跃。重读笔记的时候，也要积极输出思想，促进自己的书本知识的内化。</p>
+<p><img src="https://img2020.cnblogs.com/other/1692986/202004/1692986-20200420085046909-1732194231.png" alt="想法加工"><br>
+没有加工过的想法会消失，而经过加工后的想法，​可以装进袋子里，灵活利用。​</p>
+<p>要知道，大部分的灵感，基本上是来源于信息的重组，当你过一段时间重读笔记后，也许会产生新的灵感火花。美国广告大师詹姆斯·韦伯·扬也在《创意的生成》中提到：所谓创意，只是把原有的元素重新组合而已。</p>
+<p>这样的反复输出，也可以说是在对自己灌输思想。而通过这样的过程，已经消化过的信息又经历了一次精细的咀嚼。</p>
+<h2 id="4-建议">4. 建议</h2>
+<p>读书，希望大家都由浅入深。开始不要读太晦涩难懂的，这样不仅浪费时间，而且会让自己失去对读书的兴趣。<br>
+笔记，能把重点内容和自己的思考记录下来，或者整理成册，经常翻阅，效果更佳！<br>
+重读，选择自己需要或感兴趣的章节，重新阅读和思考。<br>
+习惯，养成读书，而不是看书的好习惯，相信你会有所收获！</p>
+<p>以后别再调侃“ 我读书少，你们不要骗我”了。如果你只是看书，那这句话对你来说，真的是“老铁，没毛病啊！”</p>
+<p>文章出自：一个曾经浪费大量时间看书的读书人。<br>
+参考: &lt;如何有效阅读一本书&gt;</p>
+<p>公众号： 锅外的大佬 ，欢迎加群~<br>
+博客地址： <a href="http://www.developlee.top">http://www.developlee.top</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-20 08:51</span>&nbsp;
+<a href="https://www.cnblogs.com/liululee/">锅外的大佬</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735762" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12735762);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 516787, cb_blogApp = 'liululee', cb_blogUserGuid = 'c9c57687-33e3-4a58-fa91-08d6dc1f79f5';
+    var cb_entryId = 12735762, cb_entryCreatedDate = '2020-04-20 08:51', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 锅外的大佬
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

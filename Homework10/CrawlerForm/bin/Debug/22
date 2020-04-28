@@ -1,0 +1,548 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="高级工程师 Java注解 前言 代码，就是我们身为程序员的名片。 简洁，优雅，统一，是我们的追求。 优秀的代码，会给浏览者一种艺术的美感。如DL大神的JUC包，感兴趣的小伙伴，可以研究一下。 那么日常" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>高级工程师-Java注解 - 血夜之末 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/codinglife/bundle-codinglife.min.css?v=hlpQ1CJDwwJXDxv2HNauUmW3NjyWzoMaw1uER19SLT0" />
+    <link type="text/css" rel="stylesheet" href="https://www.cnblogs.com/Tiancheng-Duan/custom.css?v=Ch7OkuCaMl3&#x2B;w0k5CIBRvf2X0Mk=" />
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/codinglife/bundle-codinglife-mobile.min.css?v=XjHfryC9ctsatIZz1dHn7TsRIqmwz9c3aj_6SCfHSDM" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/Tiancheng-Duan/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/Tiancheng-Duan/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/Tiancheng-Duan/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 294506;
+        var currentBlogApp = 'Tiancheng-Duan';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CodingLife';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/Tiancheng-Duan/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Tiancheng-Duan/">血夜之末</a>
+</h1>
+<h2>
+Stay Hungry,Stay Foolish
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Tiancheng-Duan/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E8%A1%80%E5%A4%9C%E4%B9%8B%E6%9C%AB">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/Tiancheng-Duan/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+65&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+70</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/Tiancheng-Duan/p/12735795.html">高级工程师-Java注解</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <h1 id="高级工程师-java注解">高级工程师-Java注解</h1>
+<h2 id="前言">前言</h2>
+<p>代码，就是我们身为程序员的名片。</p>
+<p>简洁，优雅，统一，是我们的追求。</p>
+<p>优秀的代码，会给浏览者一种艺术的美感。如DL大神的JUC包，感兴趣的小伙伴，可以研究一下。</p>
+<p>那么日常中，各位看到的优秀代码，有着哪些特点呢？充分利用的工具类（lang3，lombok，Validation等等），完善的注解，统一的代码规范等等。还有的，就是Java语言的诸多高级特性（lambda，stream，io等）。</p>
+<p>Java语言中，有三个特性，是高级工程师不可或缺的：</p>
+<ul>
+<li>注解</li>
+<li>反射</li>
+<li>泛型</li>
+</ul>
+<p>如果代码中，存在这些东西，那么即使应用得还不够合理，也能够从侧面证明这位程序员的技术追求。</p>
+<p>这三点是初级工程师很难掌握的，因为缺乏了解与需求（或者说想不到对应的需求）。而高级工程师为了给出更加具有通用性，业务无侵入的代码，就常常需要与这些特性打交道。</p>
+<p>在不断积累后的今天，我觉得我可以尝试写一写自己对这些特性的认识了。</p>
+<p>今天就从注解开始，阐述我对高级工程师的一些编码认识。</p>
+<h2 id="简介">简介</h2>
+<p>我发现很多小伙伴总是在喜欢记忆一些注解的功能，比如表示非空的@NotNull等。</p>
+<p>这里，我要从功能与原理角度说明两点：</p>
+<ul>
+<li>功能：注解是一种“增强型”的注释。只不过相对于只能给人看的注释，注解可以给电脑（JVM，程序等）看。</li>
+<li>原理：注解的底层是Annotation接口的继承者。只不过相对于日常使用的接口，注解需要使用@interface，但是编译的结果依旧是接口继承（如TestAnnotation extend Annotation）。</li>
+</ul>
+<p><strong>请大家牢记上面两点，这是有关注解认识的绝对核心</strong>。</p>
+<p>只要大家抓住这两个角度去认识注解，那么很快就可以成为注解达人。后续很多阐述都会从这两个角度，去为大家解释。如为什么人们常说注解是无法继承的，为什么需要元注解等等。</p>
+<h3 id="注解的目录结构">注解的目录结构</h3>
+<p><img src="https://img-blog.csdnimg.cn/20200414000209310.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1cmVraW5n,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>其实可以看到，JDK中有关注解的内容很少，非常适合作为三大特性的入门啊。因为注解的实现基础是存在于JVM中的，JDK只是提供了对应的工具。</p>
+<h3 id="annotation接口">Annotation接口</h3>
+<p>上面提到注解的底层是接口，这里以图为证。</p>
+<p><img src="https://img-blog.csdnimg.cn/2020041323595426.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1cmVraW5n,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>注意，仔细看这个接口的注释。注释中明确提出，虽然注解的本质是接口。但是直接引用Annotation接口，是无法实现注解功能的。</p>
+<h2 id="元注解">元注解</h2>
+<h3 id="简介-2">简介</h3>
+<p>通俗来说，元注解就是注解的注解。</p>
+<p>首先元注解，是Java自带的预置注解。从这个角度，需要与@XXX修饰的自定义注解进行区分。</p>
+<p>站在功能上来说，元注解就是专门修饰注解的“注释”，用来告诉编译器，虚拟机，相关的信息（如运行时间，目标对象）。</p>
+<p>站在原理上来说，元注解也是注解，也是使用了@interface（底层依旧是继承Annotation接口）。</p>
+<p>不过注解，在底层实现已经继承Annotation接口，那么就无法通过继承接口的方式（Java不支持多重继承），来保存元注解的信息（尤其这个信息往往不止一类）。那么注解的元注解信息是如何保存，并交给计算机的呢？答案就是通过RuntimeVisibleAnnotations进行相关信息的保存的。以下就是对DynamicPropertyVerification注解反编译的结果，重点在于反编译结果的最后一段。</p>
+<pre><code class="language-java">
+	Classfile /D:/IDEA_Project/IdeaProjects/learning/demo/target/classes/tech/jarry/learning/demo/common/anno/DynamicPropertyVerification.class
+	  Last modified Apr 12, 2020; size 899 bytes
+	  MD5 checksum 72657e8b89f0de070bf7085b0dd975da
+	  Compiled from &quot;DynamicPropertyVerification.java&quot;
+	public interface tech.jarry.learning.demo.common.anno.DynamicPropertyVerification extends java.lang.annotation.Annotation
+	  minor version: 0
+	  major version: 52
+	  flags: ACC_PUBLIC, ACC_INTERFACE, ACC_ABSTRACT, ACC_ANNOTATION
+	Constant pool:
+	   #1 = Class              #28            // tech/jarry/learning/demo/common/anno/DynamicPropertyVerification
+	   #2 = Class              #29            // java/lang/Object
+	   #3 = Class              #30            // java/lang/annotation/Annotation
+	   #4 = Utf8               message
+	   #5 = Utf8               ()Ljava/lang/String;
+	   #6 = Utf8               AnnotationDefault
+	   #7 = Utf8               property verification fail
+	   #8 = Utf8               groups
+	   #9 = Utf8               ()[Ljava/lang/Class;
+	  #10 = Utf8               Signature
+	  #11 = Utf8               ()[Ljava/lang/Class&lt;*&gt;;
+	  #12 = Utf8               payload
+	  #13 = Utf8               ()[Ljava/lang/Class&lt;+Ljavax/validation/Payload;&gt;;
+	  #14 = Utf8               SourceFile
+	  #15 = Utf8               DynamicPropertyVerification.java
+	  #16 = Utf8               RuntimeVisibleAnnotations
+	  #17 = Utf8               Ljava/lang/annotation/Documented;
+	  #18 = Utf8               Ljava/lang/annotation/Target;
+	  #19 = Utf8               value
+	  #20 = Utf8               Ljava/lang/annotation/ElementType;
+	  #21 = Utf8               FIELD
+	  #22 = Utf8               Ljava/lang/annotation/Retention;
+	  #23 = Utf8               Ljava/lang/annotation/RetentionPolicy;
+	  #24 = Utf8               SOURCE
+	  #25 = Utf8               Ljavax/validation/Constraint;
+	  #26 = Utf8               validatedBy
+	  #27 = Utf8               Ltech/jarry/learning/demo/common/anno/DynamicPropertyVerificationValidator;
+	  #28 = Utf8               tech/jarry/learning/demo/common/anno/DynamicPropertyVerification
+	  #29 = Utf8               java/lang/Object
+	  #30 = Utf8               java/lang/annotation/Annotation
+	{
+	  public abstract java.lang.String message();
+	    descriptor: ()Ljava/lang/String;
+	    flags: ACC_PUBLIC, ACC_ABSTRACT
+	    AnnotationDefault:
+	      default_value: s#7
+	  public abstract java.lang.Class&lt;?&gt;[] groups();
+	    descriptor: ()[Ljava/lang/Class;
+	    flags: ACC_PUBLIC, ACC_ABSTRACT
+	    AnnotationDefault:
+	      default_value: []Signature: #11       // ()[Ljava/lang/Class&lt;*&gt;;
+	
+	  public abstract java.lang.Class&lt;? extends javax.validation.Payload&gt;[] payload();
+	    descriptor: ()[Ljava/lang/Class;
+	    flags: ACC_PUBLIC, ACC_ABSTRACT
+	    AnnotationDefault:
+	      default_value: []Signature: #13       // ()[Ljava/lang/Class&lt;+Ljavax/validation/Payload;&gt;;
+	}
+	SourceFile: &quot;DynamicPropertyVerification.java&quot;
+	RuntimeVisibleAnnotations:
+	  0: #17()
+	  1: #18(#19=[e#20.#21])
+	  2: #22(#19=e#23.#24)
+	  3: #25(#26=[c#27])
+
+</code></pre>
+<p>最后一段，通过RuntimeVisibleAnnotations，保存了所需要的元注解信息。</p>
+<p>如果对JVM底层原理有了解的小伙伴，应该对RuntimeVisibleAnnotations不陌生。不了解的小伙伴，可以查看<a href="https://docs.oracle.com/cd/E21764_01/apirefs.1111/b32476/oracle/toplink/libraries/asm/attrs/RuntimeVisibleAnnotations.html">Class RuntimeVisibleAnnotations</a></p>
+<h2 id="预置注解">预置注解</h2>
+<h3 id="元注解-2">元注解</h3>
+<p>元注解是Java自带的，主要分为：</p>
+<ul>
+<li>@Rentention：表示目标注解的保持策略。其value为RetentionPolicy。如果目标注解没有使用该注解，则默认使用RetentionPolicy.CLASS</li>
+<li>@Target：表示目标注解的应用目标类型。其value为ElementType。如果目标注解没有使用该注解，则目标注解可以用于除了TYPE_PARAMETER和TYPE_USE以外的任何地方（这两个类型都是Java8新添加的）。</li>
+<li>@Documented：表示目标注解可以出现在JavaDoc中。</li>
+<li>@Repeatable：表示目标注解可以在同一位置，重复使用。</li>
+<li>@Inherited：表示目标注解可以随着所修饰的类的继承关系，被子类继承。</li>
+</ul>
+<h4 id="retention">@Retention</h4>
+<p>源码：</p>
+<pre><code class="language-java">
+	@Documented
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.ANNOTATION_TYPE)
+	public @interface Retention {
+	    /**
+	     * Returns the retention policy.
+	     * @return the retention policy
+	     */
+	    RetentionPolicy value();
+	}
+
+</code></pre>
+<p>通过RetentionPolicy枚举表示目标注解的保持策略。</p>
+<pre><code class="language-java">
+	public enum RetentionPolicy {
+	    /**
+	     * 目标注解会在编译期丢失
+	     */
+	    SOURCE,
+	
+	    /**
+	     * 默认行为。虽然目标注解会通过编译，保存至.class文件中，但是JVM不会在运行时识别该注解。
+	     */
+	    CLASS,
+	
+	    /**
+	     * 常用行为。目标注解会保存至.class文件中，JVM会在运行时识别，并记录该注解。所以可以通过反射获取对应的信息。
+	     * 详见 java.lang.reflect.AnnotatedElement
+	     */
+	    RUNTIME
+	}
+
+</code></pre>
+<p>为了便于大家理解，这里再举一些例子。这里挑选一些Java自带的，不用大家再去自己写demo，增加认知负荷：</p>
+<ul>
+<li>@Retention（RetentionPolicy.SOURCE)：如@Override注解，由于该注解只是用于进行代码检测，所以只要存在于源码中即可，故选择RetentionPolicy.SOURCE。类似的还有@SuppressWarnings注解等。</li>
+<li>@Retention（RetentionPolicy.CLASS)：涉及注解处理器，所以实例很少。可以查看<a href="https://www.jianshu.com/p/ac017f8a4d05">自定义注解之编译时注解(RetentionPolicy.CLASS)（一）</a>。</li>
+<li>@Retention（RetentionPolicy.RUNTIME)：如@Deprecated，由于该注解需要在运行时提示用户注解修饰的方法，类等已经过时，所以需要JVM中有对应“注释”信息，故采用RetentionPolicy.RUNTIME。类似的还有@Repeatable等。</li>
+</ul>
+<h4 id="target">@Target</h4>
+<pre><code class="language-java">
+	@Documented
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.ANNOTATION_TYPE)
+	public @interface Target {
+	    /**
+	     * Returns an array of the kinds of elements an annotation type
+	     * can be applied to.
+	     * @return an array of the kinds of elements an annotation type
+	     * can be applied to
+	     */
+	    ElementType[] value();
+	}
+
+</code></pre>
+<p>通过ElementType枚举表示目标注解的应用目标类型。</p>
+<pre><code class="language-java">
+	public enum ElementType {
+	    /** 类，接口（包括注解，即Annotation接口），或者枚举类型 */
+	    TYPE,
+	
+	    /** 属性 (包括枚举常量，枚举常量示例：Retention.SOURCE) */
+	    FIELD,
+	
+	    /** 方法 */
+	    METHOD,
+	
+	    /** 形参（形式参数） */
+	    PARAMETER,
+	
+	    /** 构造器 */
+	    CONSTRUCTOR,
+	
+	    /** 本地变量 */
+	    LOCAL_VARIABLE,
+	
+	    /** 注解类型 */
+	    ANNOTATION_TYPE,
+	
+	    /** 包 */
+	    PACKAGE,
+	
+	    /**
+	     * 类型参数（针对数据类型）
+	     * @since 1.8
+	     */
+	    TYPE_PARAMETER,
+	
+	    /**
+	     * 类型（功能域包含PARAMETER与TYPE_PARAMETER）
+	     * @since 1.8
+	     */
+	    TYPE_USE
+	}
+
+</code></pre>
+<p>这里不会一一举例，只会点出重点：</p>
+<ul>
+<li>TYPE_PARAMETER与TYPE_USE是Java8新增加的。所以使用Java7的小伙伴要注意。</li>
+<li>ElementType.TYPE涵盖范围很广泛，在不知用哪个时，可以先用这个。</li>
+</ul>
+<h4 id="documented">@Documented</h4>
+<p>默认情况下，注解是不出现在 javadoc 中的。通过给目标注解加上 @Documented 元注解，能使目标注解出现在 javadoc 中。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200414005516328.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1cmVraW5n,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>从源码可以看出，@Documented是一个没有任何成员的标记注解。</p>
+<h4 id="repeatable">@Repeatable</h4>
+<p><img src="https://img-blog.csdnimg.cn/20200414005528612.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1cmVraW5n,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>@Repeatable注解的使用，引用一个不错的<a href="https://www.jianshu.com/p/65c4af2ce8f0">demo</a>。</p>
+<pre><code class="language-java">
+	package com.zejian.annotationdemo;
+	import java.lang.annotation.*;/**
+	* Created by zejian on 2017/5/20.
+	*/
+	@Target({ElementType.TYPE,ElementType.FIELD,ElementType.METHOD})
+	@Retention(RetentionPolicy.RUNTIME)
+	@Repeatable(FilterPaths.class)
+	public @interface FilterPath {
+	   String  value();
+	}
+	
+	@Target(ElementType.TYPE)
+	@Retention(RetentionPolicy.RUNTIME)
+	@interface FilterPaths {
+	   FilterPath[] value();
+	}
+	
+	@FilterPath(&quot;/web/update&quot;)
+	@FilterPath(&quot;/web/add&quot;)
+	@FilterPath(&quot;/web/delete&quot;)
+</code></pre>
+<p>上述代码，其实分为两个部分：</p>
+<ul>
+<li>使用@Repeatable注解，使得其修饰的@FilterPath，可以在目标上重复标记（便于设置不同的成员变量）。</li>
+<li>通过@FilterPaths注解（包含成员变量-FilterPath[] value ()），将@FilterPath集中到@FilterPaths中，便于后续逻辑处理。</li>
+</ul>
+<h4 id="inherited">@Inherited</h4>
+<p>@Inherited同样是只能修饰注解的元注解，它所标注的目标注解具有继承性。</p>
+<p>这里解释一下这个继承性，这并不是注解间的继承。而是指目标注解可以随着类的继承，而被子类继承。简单说，就是目标注解修饰的类，其后代类也会被该注解标注（可以通过getAnnotation方法获取）。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200414005544675.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2N1cmVraW5n,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>这里不再赘述，感兴趣的小伙伴，可以查看<a href="https://www.runoob.com/w3cnote/java-annotation.html">Java 注解（Annotation）</a>中的相关示例。</p>
+<h3 id="功能注解">功能注解</h3>
+<p>Java预置的功能注解，主要分为：</p>
+<ul>
+<li>@Override：该注解修饰的目标方法，必须是重写基类方法，或实现对应接口方法，否则编译器会报错。</li>
+<li>@Deprecated：该注解修饰的目标，表示已经过时，不推荐使用。编码时，使用该注解的目标，会有划线提示。</li>
+<li>@SuppressWarnings：该注解修饰的目标，将会忽略某些异常（由注解的value指定），从而通过编译器编译。</li>
+<li>@SafeVarargs：该注解修饰的构造函数（只能修饰构造函数），将会忽略可变参数带来的警告。该注解于Java7引入。</li>
+<li>@FunctionalInterface：该注解修饰的接口，为函数式接口。如java.util.function下的Consumer<T>接口，作为一个函数式接口，被该注解修饰（函数式接口不一定有该注解修饰，但被该注解修饰的接口，一定是函数式接口）。</li>
+</ul>
+<h2 id="自定义注解">自定义注解</h2>
+<p>到了这里，大家应该对注解不再陌生了。<br>
+而在日常开发中，我们常常需要自定义开发一些注解。<br>
+自定义注解分为以下步骤：</p>
+<ol>
+<li>[必选] 使用@interface来构建自定义注解。一般在创建自定义注解的同时，就达成了该要求。</li>
+<li>[可选] 使用@Target元注解。通过该注解，确定自定义注解的作用目标类型。注意：如果目标注解没有使用该注解，则目标注解可以用于除了TYPE_PARAMETER和TYPE_USE以外的任何地方（这两个类型都是Java8新添加的）。</li>
+<li>[可选] 使用@Retention元注解。通过该注解，明确自定义注解的生命周期，或者说自定义注解作用域。如果目标注解没有使用该注解，则默认使用RetentionPolicy.CLASS</li>
+<li>[可选] 添加成员变量。格式为“long value() default 1000L;”，与Java8的接口成员变量非常类似。注意：注解的成员变量只能采用无参方法表示。并且注解的成员变量，只能采用基本数据类型(char，boolean,byte、short、int、long、float、double)和String、Enum、Class、annotations数据类型,以及这一些类型的数组。</li>
+<li>[可选] 使用自定义注解。自定义注解的使用领域很多，主要分为两个方向：
+<ul>
+<li>利用已有框架，不需要自己实现相关逻辑，自定义注解多作为标记注解。如配合SpringBoot的注解，形成自己的注解（相关的逻辑由SpringBoot自己处理）</li>
+<li>利用已有框架，需要自己实现部分逻辑（不涉及反射），但需要关联已有框架，并实现对应接口。如Validation框架的自定义校验注解，感兴趣的小伙伴，可以查看我之前写的<a href="https://www.cnblogs.com/Tiancheng-Duan/p/12670866.html">Validation框架的应用</a>。</li>
+<li>可选择已有框架，需要自己实现诸多逻辑。如在AOP中，我们常常需要通过反射，获取自定义注解的信息（如参数等），或者自定义注解修饰的目标的信息（如参数，方法名等）。这部分，我会在后续的反射部分详细说明。</li>
+</ul>
+</li>
+</ol>
+<h2 id="总结">总结</h2>
+<p>简单总结一下，本文主要描述了：</p>
+<ol>
+<li>注解是什么：增强型的注释，本质是接口</li>
+<li>元注解是什么：注解的注解，作用是为了标识目标注解。包括@Target，@Retention，@Documented，@Repeatable,@Inherited.</li>
+<li>预置注解是什么：JDK自带的经典功能注解，如@Override，@Deprecated，@SuppressWarnings，@SafeVarargs，@FunctionalInterface。</li>
+<li>自定义注解如何实现：主要分为五步，但是其中必要的步骤，就一步：使用@interface来构建自定义注解。</li>
+</ol>
+<p>至此，Java注解的内容就基本展现了。</p>
+<p>最后，还是强调两个方面：</p>
+<ol>
+<li>注解就是增强型的注释（可被计算机识别的注释），本质是接口。把握住这两点，就非常好理解注解与它的各种规则，行为。</li>
+<li>注解本身并没有任何功能（因为它只是注释，本质也只是接口），需要其他代码支撑，它才能体现价值。</li>
+</ol>
+<p>希望对大家有所帮助，还有不清楚的地方，可以查看下列参考目录。</p>
+<p>愿与诸君共进步。</p>
+<h2 id="附录">附录</h2>
+<h3 id="参考">参考</h3>
+<ul>
+<li><a href="https://docs.oracle.com/cd/E21764_01/apirefs.1111/b32476/oracle/toplink/libraries/asm/attrs/RuntimeVisibleAnnotations.html">Class RuntimeVisibleAnnotations</a></li>
+<li><a href="https://www.cnblogs.com/huanghuanghui/p/10164754.html">注解之注解的属性</a></li>
+<li><a href="https://www.cnblogs.com/Tiancheng-Duan/p/12670866.html">Validation框架的应用</a></li>
+<li><a href="https://www.runoob.com/w3cnote/java-annotation.html">Java 注解（Annotation）</a></li>
+<li><a href="https://www.jianshu.com/p/65c4af2ce8f0">Android 注解系列之Annotation（二）</a></li>
+<li><a href="https://www.jianshu.com/p/ac017f8a4d05">自定义注解之编译时注解(RetentionPolicy.CLASS)（一）</a></li>
+<li><a href="https://yuque.antfin-inc.com/huanyang.chy/ygwqsn/lqkxpg">注解</a></li>
+</ul>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-20 09:02</span>&nbsp;
+<a href="https://www.cnblogs.com/Tiancheng-Duan/">血夜之末</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735795" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12735795);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 294506, cb_blogApp = 'Tiancheng-Duan', cb_blogUserGuid = '69c282c5-8442-e611-9fc1-ac853d9f53cc';
+    var cb_entryId = 12735795, cb_entryCreatedDate = '2020-04-20 09:02', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 血夜之末
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

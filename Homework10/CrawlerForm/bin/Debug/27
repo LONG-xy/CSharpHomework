@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="这才是真正的前后端分离，支撑亿级并发完全不是事" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> 千亿级平台技术架构：为了支撑高并发，我把身份证存到了JS里 - 码大叔 - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/simplememory/bundle-simplememory.min.css?v=OL4qeo1LNGlN1rKIhv5UctANvt0M6Nx6kLzr_ffx3Xk" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/SimpleMemory/bundle-SimpleMemory-mobile.min.css" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/madashu/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/madashu/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/madashu/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 544171;
+        var currentBlogApp = 'madashu';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'SimpleMemory';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/madashu/"><img id="blogLogo" src="/skins/custom/images/logo.gif" alt="返回主页" /></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/madashu/">码大叔</a>
+</h1>
+<h2>
+
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/madashu/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E7%A0%81%E5%A4%A7%E5%8F%94">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/madashu/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+9&nbsp; </span>
+<span id="stats_article_count">文章 - 
+0&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+6</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class = "postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/madashu/p/12735752.html"> 千亿级平台技术架构：为了支撑高并发，我把身份证存到了JS里</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+    <div id="cnblogs_post_description" style="display: none">
+        这才是真正的前后端分离，支撑亿级并发完全不是事
+    </div>
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p>@<div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="#一、用户信息安全规范">一、用户信息安全规范</a><ul><li><a href="#11-用户信息、敏感信息定义及判断依据">1.1 ​用户信息、敏感信息定义及判断依据</a><ul><li><a href="#111-个人信息">1.1.1 个人信息</a></li><li><a href="#112-个人敏感信息">1.1.2 个人敏感信息</a></li></ul></li><li><a href="#12-用户信息存储的注意事项">1.2 ​用户信息存储的注意事项</a></li></ul></li><li><a href="#二、框架技术实现">二、​框架技术实现</a><ul><li><a href="#21-用户敏感信息自动加解密">2.1 用户敏感信息自动加解密</a><ul><li><a href="#211-通过interceptor实现数据的自动加解密">2.1.1 通过Interceptor实现数据的自动加解密</a></li><li><a href="#212-通过basetypehandler实现数据的自动加解密">2.1.2 通过BaseTypeHandler实现数据的自动加解密</a></li><li><a href="#213-mybatisplus实现数据的自动加解密">2.1.3 MybatisPlus实现数据的自动加解密</a></li></ul></li><li><a href="#22-日志文件自动过滤用户敏感信息">2.2 日志文件自动过滤用户敏感信息</a></li><li><a href="#23-密码加密和《密码法》">2.3 密码加密和《密码法》</a><ul><li><a href="#231-密码加密的注意事项">2.3.1 密码加密的注意事项</a></li><li><a href="#232-使用bcrypt实现密码加密">2.3.2 使用BCrypt实现密码加密</a></li><li><a href="#233-dropbox密码加密存储防范">2.3.3 Dropbox密码加密存储防范</a></li></ul></li></ul></li></ul></div><br>
+接着上一篇<a href="https://mp.weixin.qq.com/s?__biz=MzI0OTg4NDQ1Mg==&amp;mid=2247483784&amp;idx=1&amp;sn=e6c29fd3773aebea114d3be1b8af1a83&amp;chksm=e98bfbc3defc72d5f36dc53abe64ca96fd99fefeeb5736a337075a3da25f029e7de9de07719e&amp;token=878089764&amp;lang=zh_CN#rd">《千亿级互联网平台背后那些事-欲上青天揽明月》</a>，今天我们来聊一聊关于用户隐私信息的事。</p>
+<p>随着时代及互联网的发展，人们对个人隐私越来越重视，但隐私信息泄露及滥用的问题依然屡见不鲜。之前有一份《中国个人信息安全和隐私保护报告》曾抽取100万份调查数据，<strong>80%用户遭遇隐私泄露</strong>，还比如万豪在18年遭遇3.83亿隐私数据泄露后于2020年3月31日再次爆出520万客户信息泄露。这背后的缘由咱们就不做多讲，除了一些流氓公司的恶意行为，肯定还有很多的商业利益的驱使。今天我们来聊一聊开发人员该如何处理用户隐私，想起半年前在知乎上爆出的某省普通话水平测试查询系统开发人员把身份证直接写在了js里，有网友<strong>笑称这才是真正的前后端分离，支撑亿级并发完全不是事</strong>。<br>
+文章开始之前，先抛出一个<strong>小问题：除了姓名、身份证、银行卡、手机号外，你觉得还有哪些是用户的敏感信息，需要加密存储？</strong><img src="https://img-blog.csdnimg.cn/20200419211536904.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>什么叫个人信息，哪些又算敏感信息？个人信息该如何存储，又该如何展示？<strong>游戏中的兑换码是不是敏感信息？住宿信息是不是敏感信息？</strong>？作为一名优秀的开发人员，我们不能把目光仅仅聚焦在代码上，不能永远是产品经理或者项目经理让我这么做，还应该掌握所在行业的业务知识，包括法律及政策规范等，提升拓宽我们的业务知识面。</p>
+<h1 id="一、用户信息安全规范">一、用户信息安全规范</h1>
+<p>关于信息系统建设这一块，国家及行业其实有很多的标准和规范的，比如国家标准全文公开系统（<a href="http://openstd.samr.gov.cn/%EF%BC%89%EF%BC%89%E3%80%82%E5%85%B3%E4%BA%8E%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%EF%BC%8C%E6%9C%80%E6%96%B0%E7%9A%84%E6%98%AF%E4%BB%8A%E5%B9%B4%E5%8F%91%E5%B8%83%E7%9A%84%E3%80%8AGB/T">http://openstd.samr.gov.cn/））。关于个人信息，最新的是今年发布的《GB/T</a> 35273-2020 信息安全技术-个人信息安全规范 》，将于<strong>2020-10-01正式实施</strong>，取代老的标准GB/T 35273-2017。 整个规范文档主要体现了<strong>七大原则：权责一致原则、目的明确原则、选择同意原则、最少够用原则、公开透明原则、确保安全原则、主体参与原则</strong>。<br>
+<img src="https://img-blog.csdnimg.cn/20200418233606112.png" alt="在这里插入图片描述"></p>
+<h2 id="11-用户信息、敏感信息定义及判断依据">1.1 ​用户信息、敏感信息定义及判断依据</h2>
+<h3 id="111-个人信息">1.1.1 个人信息</h3>
+<p>个人信息，personal information。指以电子或者其他方式记录的能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的各种信息。</p>
+<p><strong>判定方式</strong>：</p>
+<ol>
+<li>识别：即从信息到个人，由信息本身的特殊性识别出特定自然人，个人信息应有助于识别出特定个人。</li>
+<li>关联：即从个人到信息，如已知特定自然人，由该特定自然人在其活动中产生的信息（如个人位置信息、个人通话记录、个人浏览记录等）即为个人信息。<br>
+符合上述两种情形之一的信息，均应判定为个人信息。</li>
+</ol>
+<p><strong>个人信息举例</strong>：<img src="https://img-blog.csdnimg.cn/20200418234027651.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="个人信息举例"><br>
+<strong>注</strong>：个人信息控制者通过个人信息或其他信息加工处理后形成的信息，例如，用户画像或特征标签，能够单独或者与其他信息结合识别特定自然人身份或者反映特定自然人活动情况的，也属于个人信息。</p>
+<h3 id="112-个人敏感信息">1.1.2 个人敏感信息</h3>
+<p>个人敏感信息，personal sensitive information。指一旦泄露、非法提供或滥用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的个人信息。通常情况下，<strong>14岁以下（含）儿童的个人信息和涉及自然人隐私的信息属于个人敏感信息</strong>。</p>
+<p><strong>判定方式</strong>：</p>
+<ol>
+<li>
+<p>泄露：个人信息一旦泄露，将导致个人信息主体及收集、使用个人信息的组织和机构丧失对个人信息的控制能力，造成个人信息扩散范围和用途的不可控。某些个人信息在泄漏后，被以违背个人信息主体意愿的方式直接使用或与其他信息进行关联分析，可能对个人信息主体权益带来重大风险，应判定为个人敏感信息。例如，个人信息主体的身份证复印件被他人用于手机号卡实名登记、银行账户开户办卡等。</p>
+</li>
+<li>
+<p>非法提供：某些个人信息仅因在个人信息主体授权同意范围外扩散，即可对个人信息主体权益带来重大风险，应判定为个人敏感信息。例如，性取向、存款信息、传染病史等。</p>
+</li>
+<li>
+<p>滥用：某些个人信息在被超出授权合理界限时使用（如变更处理目的、扩大处理范围等），可能对个人信息主体权益带来重大风险，应判定为个人敏感信息。例如，在未取得个人信息主体授权时，将健康信息用于保险公司营销和确定个体保费高低。</p>
+</li>
+</ol>
+<p><strong>个人敏感信息举例</strong><br>
+<img src="https://img-blog.csdnimg.cn/20200418235049698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="个人敏感信息举例"><br>
+<strong>注</strong>：个人信息控制者通过个人信息或其他信息加工处理后形成的信息，如一旦泄露、非法提供或滥GB/T 35273—20206用可能危害人身和财产安全，极易导致个人名誉、身心健康受到损害或歧视性待遇等的，属于个人敏感信息。</p>
+<h2 id="12-用户信息存储的注意事项">1.2 ​用户信息存储的注意事项</h2>
+<ol>
+<li>个人信息存储时间最小化，超过个人信息存储期限后，应对个人信息进行删除或匿名化处理。</li>
+<li>传输和存储个人敏感信息时，应采用加密等安全措施；采用密码技术时宜遵循密码管理相关国家标准。</li>
+<li><strong>个人生物识别信息应与个人身份信息分开存储</strong>；</li>
+<li>原则上<strong>不应存储原始个人生物识别信息（如样本、图像等）</strong>，可采取的措施包括但不限于：仅存储个人生物识别信息的摘要信息；在采集终端中直接使用个人生物识别信息实现身份识别、认证等功能； 在使用面部识别特征、指纹、掌纹、虹膜等实现识别身份、认证等功能后删除可提取个人生物识别信息的原始图像。</li>
+</ol>
+<p>整个规范文件中，还提到了用户信息的使用、展示、第三方接入、安全管理等等，有兴趣的小伙伴可以自定搜索了解一下。</p>
+<h1 id="二、框架技术实现">二、​框架技术实现</h1>
+<h2 id="21-用户敏感信息自动加解密">2.1 用户敏感信息自动加解密</h2>
+<p>正如第一章节提到的，用户的真实姓名、手机号、银行卡号、包括住宿等敏感信息需要加密存储到数据库中，业务正常使用的时候再转化为明文数据。从技术实现角度来看，无非就是新增、编辑时进行加密，查询时解密，这样一个个操作起来还是比较low的，而且很可能哪天新增了一个方法又忘记加解密了。所以大部分会通过框架来实现，实现的原理无外乎反射机器+拦截器。接下来以Mybatis为例，原理如下图，具体可参考：<a href="https://blog.csdn.net/weixin_39494923/article/details/91534658">https://blog.csdn.net/weixin_39494923/article/details/91534658</a><br>
+<img src="https://img-blog.csdnimg.cn/20200419214139567.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="211-通过interceptor实现数据的自动加解密">2.1.1 通过Interceptor实现数据的自动加解密</h3>
+<p>Mybatis默认提供了一个拦截器接口Interceptor，大部分Mybatis的增强工具都是通过该接口实现的。如果要实现自定义的拦截器，只需要实现 org.apache.ibatis.plugin.Interceptor 接口，该接口有三个方法：</p>
+<pre><code class="language-java">Object intercept(Invocation invocation) throws Throwable;
+
+Object plugin(Object target);
+
+void setProperties(Properties properties);
+</code></pre>
+<p>首先以自定义一个注解@Crypt，作用在字段上，用于告诉拦截器那个字段需要加解密。</p>
+<pre><code class="language-java">@Target({ ElementType.FIELD,ElementType.TYPE })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface Crypt {
+
+}
+</code></pre>
+<p>接下来添加一个自定义拦截器，selelct方法时进行解密，update和add方法时进行加密。</p>
+<pre><code class="language-java">@Intercepts({ @Signature(type = Executor.class, method = &quot;update&quot;, args = { MappedStatement.class, Object.class, }),
+        @Signature(type = Executor.class, method = &quot;query&quot;, args = { MappedStatement.class, Object.class,
+                RowBounds.class, ResultHandler.class }),
+        @Signature(type = ResultSetHandler.class, method = &quot;handleResultSets&quot;, args = { Statement.class }) })
+public class CryptInterceptor implements Interceptor {
+
+    @Override
+    public Object intercept(Invocation invocation) throws Throwable {
+        Object[] args = invocation.getArgs();
+        if (args.length &lt;= 0 || invocation.getMethod() == null || args[0] == null) {
+            return invocation.proceed();
+        }
+
+        String methodName = invocation.getMethod().getName();
+        if (&quot;update&quot;.equals(methodName) &amp;&amp; args[1] != null) {
+            return this.interceptUpdate(invocation);
+        } else if (&quot;query&quot;.equals(methodName) &amp;&amp; args[1] != null) {
+            return this.interceptQuery(invocation);
+        } else if (&quot;handleResultSets&quot;.equals(methodName)) {
+            return this.interceptHandleResultSets(invocation);
+        }
+        return invocation.proceed();
+    }
+
+    private Object interceptHandleResultSets(Invocation invocation) throws Throwable {
+        Object resultCollection = invocation.proceed();
+        // 略 将resultCollection的对象中有@Crypt注解的Feild进行解密
+        return newObject;
+    }
+
+    private Object interceptUpdate(Invocation invocation) throws Throwable {
+        Object[] args = invocation.getArgs();
+        Object args1Obj = args[1];
+        // 略 将args1Obj的对象进行加密
+        args[1] = newObject;
+        return invocation.proceed();
+    }
+    
+    private Object interceptQuery(Invocation invocation) throws Throwable {
+        Object[] args = invocation.getArgs();
+        Object condition = args[1];
+        // 略 将condition对象进行解密
+        args[1] = newObject;
+        return invocation.proceed();
+    }    
+}
+
+</code></pre>
+<h3 id="212-通过basetypehandler实现数据的自动加解密">2.1.2 通过BaseTypeHandler实现数据的自动加解密</h3>
+<p>一般情况下不会通过Interceptor接口对Mybatis的请求进行拦截，除非类似于“读写分离”这样的一些复杂的需求。参见上面的mybatis的执行过程，我们发现最后一步调用了TypeHander，这个类的作用就是把数据库与实体之间进行类型转换，比如把MySql的varchar转为Java的Long，把Java的Integer转为Mysql的int，所以我们可以借助于BaseTypeHandler类。</p>
+<pre><code class="language-java">@Component
+@Alias(&quot;CryptHandler&quot;)
+@MappedTypes(value = {Crypt.class})
+public class EncryptHandler extends BaseTypeHandler {
+
+    @Override
+    public void setNonNullParameter(PreparedStatement ps, int i, Object parameter, JdbcType jdbcType)
+        throws SQLException {
+        ps.setString(i, encrypt(parameter.toString()));
+    }
+
+    @Override
+    public String getNullableResult(ResultSet rs, String columnName) throws SQLException {
+        String columnValue = rs.getString(columnName);
+        return decrypt(columnValue);
+    }
+
+    @Override
+    public String getNullableResult(ResultSet rs, int columnIndex) throws SQLException {
+        String columnValue = rs.getString(columnIndex);
+        return decrypt(columnValue);
+    }
+
+    @Override
+    public String getNullableResult(CallableStatement cs, int columnIndex) throws SQLException {
+        String columnValue = cs.getString(columnIndex);
+        return decrypt(columnValue);
+    }
+
+    private String encrypt(String parameter) {
+        // 加密
+        return parameter;
+    }
+
+    private String decrypt(String columnValue) {
+        // 解密
+        return columnValue;
+    }
+}
+</code></pre>
+<p>完整 代码见上面，不做多讲。接下来需要告诉Mybatis哪些字段需要加解密，为了简化书写，定义一个类Crypt重命名为crypt，上面的类EncryptHandler也重命名为EncryptHandler</p>
+<pre><code class="language-java">@Alias(&quot;crypt&quot;)
+public final class Crypt {
+
+}
+</code></pre>
+<p>上面的两个类都放在cn.itmds.plugin目录下，配置yml文件告诉Mybatis读取重命名的配置</p>
+<pre><code class="language-yaml">mybatis:
+  type-aliases-Package: cn.itmds.plugin.dbcrypt
+ 
+</code></pre>
+<p>接下来，假设有一张member表的realname(真实姓名)字段需要加解密，写起来就很简单了：</p>
+<pre><code class="language-bash"> &lt;sql id=&quot;memberConditionSql&quot;&gt;
+        &lt;where&gt;
+            &lt;if test=&quot;id != null&quot;&gt;and id = #id}&lt;/if&gt;
+            &lt;!--这个地方只需要指定javaType=crypt，如果上面没有重命名，这个地方需要写成javaType= cn.itmds.plugin.dbcrypt.Crypt，写起来比较麻烦 --&gt;
+            &lt;if test=realName != null&quot;&gt;and real_name = #{realName,javaType=crypt}&lt;/if&gt;
+        &lt;/where&gt;
+    &lt;/sql&gt;
+</code></pre>
+<pre><code class="language-bash">    &lt;resultMap id=&quot;memberDOResultMap&quot; type=&quot;MemberDO&quot;&gt;
+        &lt;!--这个地方只需要指定typeHandler=CryptHandler，如果上面没有重命名，这个地方需要写成javaType= cn.itmds.plugin.dbcrypt.CryptHandler，写起来比较麻烦 --&gt;
+        &lt;!--另外，只需要将需要解密的字段写到这个resultMap里即可，不需要写全部的字段，其他字段系统会自动映射为MemberDO --&gt;
+        &lt;result column=&quot;phone&quot; property=&quot;phone&quot; typeHandler=&quot;CryptHandler&quot;/&gt;
+    &lt;/resultMap&gt;
+</code></pre>
+<h3 id="213-mybatisplus实现数据的自动加解密">2.1.3 MybatisPlus实现数据的自动加解密</h3>
+<blockquote>
+<p>MyBatis-Plus（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis的基础上只做增强不做改变，为简化开发、提高效率而生。</p>
+</blockquote>
+<p>MyBatis-Plus只需简单配置，即可快速进行 CRUD 操作，从而节省大量时间。而且还支持Lambda表达式，通过对象来操作sql等，所以现在使用的人越来越多。那么它如何来实现数据的自动加解密呢，超级简单。实现原理和2.1.2一样，也是通过BaseTypeHandler来实现。</p>
+<p>1、增加<code>@TableField(typeHandler = EncryptHandler.class)</code>，其中EncryptHandler就是2.1.2定义的<code>EncryptHandler.java</code>，此时新增、修改时就实现了自动加密。<br>
+2、在@TableName上设置<code>autoResultMap = true</code>，此时就实现了返回值的自动解密。</p>
+<p>Done！示例：</p>
+<pre><code class="language-java">@Data
+@TableName(value = &quot;user_info&quot;,autoResultMap = true)
+public class UserPO {
+
+    /**  */
+    @TableId(type = IdType.AUTO)
+    private Long id;
+
+    /** 真实姓名 */
+    @TableField(typeHandler = EncryptHandler.class)
+    private String realName;
+}
+</code></pre>
+<h2 id="22-日志文件自动过滤用户敏感信息">2.2 日志文件自动过滤用户敏感信息</h2>
+<p>为了便于开发调试及产线问题定位，开发框架基本都会定义日志拦截器，对所有的controller层和service层的方法进行拦截，打印详细等入参、出参。在2.1中我们提到了用户的敏感信息的加解密是在dao底层自动完成的，所以也就导致了日志中还会打印了用户的敏感信息，那么此时该如何处理呢？接下来提供一个完整的案例。</p>
+<ol>
+<li>定义一个注解@ServiceLog，可以作用在类上或者方法上。提供一个参数：ignore，默认为false。如果为true，表示该方法不需要打印日志。比如某一个类里有很多个方法需要日志，但其中某个方法是用于文件上传的或者定时任务每秒都会执行1次，这些场景下不需要打印日志，则可以设置ignore=true。</li>
+</ol>
+<pre><code class="language-java">@Target({ElementType.TYPE, ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+public @interface ServiceLog {
+
+    boolean ignore() default false;
+}
+</code></pre>
+<ol start="2">
+<li>定义一个全局拦截器，打印入参、出参日志，在这里使用的是FastJson将对象转化为字符串。</li>
+</ol>
+<pre><code class="language-java">@Aspect
+@Component
+public class ServiceLogAspect {
+
+	@Around(&quot;@within(cn.itmds.log.ServiceLog)&quot;)
+    protected Object aroundJoinPoint(ProceedingJoinPoint joinPoint) throws Throwable {
+        MethodSignature signature = (MethodSignature)joinPoint.getSignature();
+        Method method = signature.getMethod();
+        ServiceLog serviceLog = method.getAnnotation(ServiceLog.class);
+        if (null != serviceLog &amp;&amp; serviceLog.ignore()) {
+            return joinPoint.proceed();
+        }
+        long beginTime = System.currentTimeMillis();
+        Class clazz = joinPoint.getTarget().getClass();
+        String methodName = clazz.getSimpleName() + &quot;.&quot; + method.getName();
+        // 打印请求所有的入参
+        log.info(&quot;Begin|{}|{}&quot;, methodName, jsonString(joinPoint.getArgs()));
+
+        Object result = null;
+        try {
+            result = joinPoint.proceed();
+        } finally {
+        	// 打印所有的出参
+            log.info(&quot;End|{}|{}ms|{}&quot;, methodName, System.currentTimeMillis(),
+            	 - beginTime, jsonString(result));
+        }
+        return result;
+    }
+}
+
+</code></pre>
+<ol start="3">
+<li>增加一个配置项，定义需要过滤的敏感信息，比如真实姓名、手机号、身份证、密码等</li>
+</ol>
+<pre><code class="language-yaml">logging:
+  sensitiveChars: realName,phoneNumber,idCard,mail,password
+</code></pre>
+<ol start="4">
+<li>接下来，我们可以利用FastJSON的过滤器特性来实现日志的过滤。</li>
+</ol>
+<pre><code class="language-java">    private ValueFilter valueFilter = (object, name, value) -&gt; {
+        if (null == value || &quot;&quot;.equals(value)) {
+            return value;
+        }
+
+        if (value instanceof byte[]) {
+            // 如果是byte字节，直接打印长度
+            return &quot;byte length:&quot; + ((byte[])value).length;
+        } else if (value instanceof String) {
+            // 在该方法里检查name，如果name包含我们配置的敏感信息，则将value设置为加*隐藏。
+            return stringValueProcess(name, (String)value);
+        } else {
+            return value;
+        }
+    };
+</code></pre>
+<p>在第二步拦截器的方法aroundJoinPoint中,对象转化为String时，使用FastJSON的过滤器。</p>
+<pre><code class="language-java">    protected String jsonString(Object object) {
+        return JSON.toJSONString(object, valueFilter);
+    }
+</code></pre>
+<ol start="5">
+<li>Controller层同样，拦截所有的controller目录下的文件即可。</li>
+</ol>
+<pre><code class="language-java">@Around(&quot;execution(public * cn.itmds.controller..*(..) )&quot;)
+</code></pre>
+<p>Controller通过该方法实现时要注意，http请求和response请求有些字段是无法序列化的，所以务必要进行过滤。</p>
+<pre><code class="language-java">public static &lt;T&gt; Stream&lt;T&gt; streamOf(T[] array) {
+        return ArrayUtils.isEmpty(array) ? Stream.empty() : Arrays.asList(array).stream();
+    }
+
+//... 拦截器的方法中增加过滤
+ List&lt;Object&gt; logArgs = (List)streamOf(args).filter((arg) -&gt; {
+                return !(arg instanceof HttpServletRequest) &amp;&amp; !(arg instanceof HttpServletResponse);
+            }).collect(Collectors.toList());
+// 打印请求所有的入参
+log.info(&quot;Begin|{}|{}&quot;, methodName, jsonString(logArgs));
+
+</code></pre>
+<h2 id="23-密码加密和《密码法》">2.3 密码加密和《密码法》</h2>
+<p>关于密码，国家也是有一部《密码法》的，最近好像也在推广宣传。当然我们平时常说的用户名“密码”只是“口令”，并不是密码法中的“密码”。《密码法》中的密码使用范围包含二代身份证、电子签名、增值税发票密码区之类的，具体大家可以去看看全文，不做多讲。<br>
+<img src="https://img-blog.csdnimg.cn/20200419000255264.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="231-密码加密的注意事项">2.3.1 密码加密的注意事项</h3>
+<p>现在的开发人员基本都具备一定的安全知识，很少有明文存储密码的了，甚至直接md5的也很少，大部分都开始采用sha1，sha256了，也有一些公司开始使用用Argon2</p>
+<blockquote>
+<p>Argon2 是一种慢哈希函数，在 2015 年获得 Password Hashing Competition 冠军，利用大量内存计算抵御GPU 和其他定制硬件的破解，提高哈希结果的安全性。</p>
+</blockquote>
+<p>这里主要讲几点：</p>
+<ol>
+<li>每一个密码都要加上不同的盐，确保相同的密码也产生不同的hash。比如两个人的密码都是abcd1234，生成的hash一定要是不同的。</li>
+<li>不要使用普通的随机算法生成盐，一定要使用CSPRNG（Cryptographically Secure Pseudo-Random Number Generator）；对应java就是Java.security.SecureRandom，对应C/C++	CryptGenRandom。</li>
+<li>有些系统使用用户的id、手机号等来作为盐加密密码，这其实不符合盐的生成规则要求。但对于一般性的安全性要求并不是那么高的网站，也基本能用。</li>
+</ol>
+<h3 id="232-使用bcrypt实现密码加密">2.3.2 使用BCrypt实现密码加密</h3>
+<p>Bcrypt是一个跨平台的文件加密工具，SpringSecurity默认使用了该算法。如果项目中没有依然SpringSecurity，也可以单独引入jar包。 bcrypt算法与md5/sha算法有一个很大的区别，就是每次生成的hash值都是不同的，不需要我们自行指定盐。加密后的字符长度比较长，有60位，数据库字段设计时务必要注意。示例如下：</p>
+<pre><code class="language-java">    public static void main(String[] args) {
+        BCryptPasswordEncoder bcrypt = new BCryptPasswordEncoder();
+        String pwd = &quot;abcd1234&quot;;
+        for (int i = 0; i &lt; 5; i++) {
+            String encodePwd = bcrypt.encode(pwd);
+            boolean result = bcrypt.matches(pwd, encodePwd);
+            System.out.println(encodePwd + &quot;|&quot; + result);
+        }
+    }
+</code></pre>
+<p><img src="https://img-blog.csdnimg.cn/20200419215437708.png" alt="在这里插入图片描述"><br>
+<strong>加密后的字符串值组成</strong>：</p>
+<ul>
+<li>$是分割符，无意义；</li>
+<li>2a是bcrypt加密版本号；</li>
+<li>10是cost的值；</li>
+<li>后面的字符串中，前22位是salt值；再然后的字符串就是密码的密文了。</li>
+</ul>
+<p>有兴趣的可以看下源码</p>
+<pre><code class="language-java">public static String gensalt(int log_rounds, SecureRandom random) {
+		if (log_rounds &lt; MIN_LOG_ROUNDS || log_rounds &gt; MAX_LOG_ROUNDS) {
+			throw new IllegalArgumentException(&quot;Bad number of rounds&quot;);
+		}
+		StringBuilder rs = new StringBuilder();
+		byte rnd[] = new byte[BCRYPT_SALT_LEN];
+
+		random.nextBytes(rnd);
+
+		rs.append(&quot;$2a$&quot;);
+		if (log_rounds &lt; 10) {
+			rs.append(&quot;0&quot;);
+		}
+		rs.append(log_rounds);
+		rs.append(&quot;$&quot;);
+		encode_base64(rnd, rnd.length, rs);
+		return rs.toString();
+	}
+</code></pre>
+<h3 id="233-dropbox密码加密存储防范">2.3.3 Dropbox密码加密存储防范</h3>
+<p>Dropbox是提供文件在线存储的著名厂商，曾在其官方技术博客发表名为《How Dropbox securely stores your passwords》的文章，讲述了他们的用户密码加密存储方案。<br>
+<img src="https://img-blog.csdnimg.cn/20200419003256697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0phNW9u,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<ol>
+<li>首先使用sha512，将用户密码归一化为64字节hash值。因为两个原因：一个是Bcrypt算对输入敏感，如果用户输入的密码较长，可能导致Bcrypt计算过慢从而影响响应时间；另一个是有些Bcrypt算法的实现会将长输入直接截断为72字节，从信息论的角度讲，这导致用户信息的熵变小；</li>
+<li>然后使用Bcrypt算法。选择Bcrypt的原因，是Dropbox的工程师对这个算法更熟悉调优更有经验，参数选择的标准，是Dropbox的线上API服务器可以在100ms左右的时间可计算出结果。另外，关于Bcrypt和Scrypt哪个算法更优，密码学家也没有定论。同时，Dropbox也在关注密码hash算法新秀Argon2，并表示会在合适的时机引入；</li>
+<li>最后使用AES加密。因为Bcrypt不是完美的算法，所以Dropbox使用AES和全局密钥进一步降低密码被破解的风险，为了防止密钥泄露，Dropbox采用了专用的密钥保存硬件。Dropbox还提到了最后使用AES加密的另一个好处，即密钥可定时更换，以降低用户信息/密钥泄露带来的风险。</li>
+</ol>
+<p>用户隐私保护，远不是开发人员加解密这么简单，还需要运营、运维团队各方面的配合，任重而道远！</p>
+<p>【人总要给自己留一些隐私的空间，就像你总是会站在你的影子前挡住了光的视线】<br>
+People always want to give yourself some privacy space, just like you will always be standing in front of the shadow of you blocking the line of sight of the light.</p>
+<p>参考：<br>
+<a href="https://www.cnblogs.com/xinzhao/p/6035847.html">https://www.cnblogs.com/xinzhao/p/6035847.html</a><br>
+<a href="https://blog.csdn.net/weixin_39494923/article/details/91534658">https://blog.csdn.net/weixin_39494923/article/details/91534658</a></p>
+<hr>
+<p>架构师，十年戎【码】，老【叔】开花。个人微信号：qiaojs，关注架构设计、大数据、微服务、技术管理。<br>
+<img src="https://img-blog.csdnimg.cn/20200412182950207.jpg" alt="在这里插入图片描述"></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2020-04-20 08:47</span>&nbsp;
+<a href="https://www.cnblogs.com/madashu/">码大叔</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12735752" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12735752);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 544171, cb_blogApp = 'madashu', cb_blogUserGuid = '897d4a3f-a8c4-4dd3-0d6d-08d738548dbb';
+    var cb_entryId = 12735752, cb_entryCreatedDate = '2020-04-20 08:47', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright &copy; 2020 码大叔
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+</body>
+</html>

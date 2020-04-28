@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>wuch - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/cornflowerblue/bundle-cornflowerblue.min.css?v=o43g26PBp8Ms0dvOnqAyf87bz7sWvlSxX_0z0-i39is" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/cornflowerblue/bundle-cornflowerblue-mobile.min.css?v=uSD3jCHs58esszylllmEPIWECeJUHRFeF8_GTJIdQVc" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/haozi0804/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/haozi0804/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/haozi0804/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 56977;
+        var currentBlogApp = 'haozi0804';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CornflowerBlue';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="top">
+
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/haozi0804/">浩的博客</a>
+</h1>
+<p id="tagline">
+
+</p>
+
+
+</div>
+<div id="main">
+	
+
+
+
+
+		
+<p class="date">
+	2020年4月20日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/04/20.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12725449.html">
+    Python工业互联网监控项目实战3—websocket to UI
+</a>
+</h2>
+			
+			
+
+    <div class="cnblogs-post-body" id="postlist_postbody_12725449">
+        正文内容加载中...
+    </div>
+    <script type="text/javascript">getBlogPostBody(12725449);</script>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-04-20 08:44 wuch 阅读 (52) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12725449" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年4月14日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/04/14.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12696459.html">
+    python工业互联网监控项目实战2—OPC
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：上一小节我们首先通过一个简单的json格式来完成数据到UI端的传输，UI端解析Json数据，并通过JQuery渲染到div上来完成数据的显示，最后ajax轮询实现了数据的实时刷新。本小节我们把Domo进一步迭代改进，首先规范数据传输的格式，然后，实现实时读取模拟OPC Server的tag位号值。            <a href="https://www.cnblogs.com/haozi0804/p/12696459.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-04-14 13:11 wuch 阅读 (260) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12696459" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年3月25日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/03/25.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12564080.html">
+    python工业互联网监控项目实战1—UI
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：随着国家工业2025战略的推进，工业互联网发展将会提速，将迎来一个新的发展时期，设备的在线监控IOT应用将越来越广，这个系列文章尝试用主流的互联网开发技术，在工业互联网的监控领用做一个基于B/S架构的探索。笔者对于工业互联网监控也有几点感受就是现在好多企业项目越来越多的采用WebGL做三维动画交互式监控内容越走越复杂、越做越炫，首页就是工厂的3D鸟瞰图，模拟工厂三维布局，演示虚拟工厂效果，对于参观访问者看起来的确高大上，但是对于熟悉现在工艺设备的操作人员来说，反而不是很实用，直观2D线条图很容易方便查看产线设备的整体运行情况，交互式3D画面更适合培训和参观。所以估计缩略的2D线条图的监控画面还会长期与3D监控图并存，用来监控简化的产线全局运行工况。            <a href="https://www.cnblogs.com/haozi0804/p/12564080.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-03-25 10:13 wuch 阅读 (123) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12564080" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年3月20日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/03/20.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12534884.html">
+    websocket实时监控画面
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：WebSocket通信协议 是 HTML5 开始支持的一种在单个 TCP 连接上进行全双工通讯的协议。在 WebSocket 技术架构中，浏览器和服务器只需要完成一次握手，两者之间就直接可以创建持久性的连接，并进行双向数据传输。            <a href="https://www.cnblogs.com/haozi0804/p/12534884.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-03-20 21:12 wuch 阅读 (115) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12534884" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年3月13日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/03/13.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12487767.html">
+    AJAX轮询的实时监控画面
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：上一篇我们通过异步刷新Ajax&#160;技术，来实现监控页面监控位号值的刷新，采用Ajax&#160;（Asynchronous&#160;Javascript&#160;And&#160;XML）技术，是指一种创建交互式、快速动态网页应用的网页开发技术，无需重新加载整个网页的情况下，能够更新部分网页的技术。 重点：异步和部分网页更新，通过在后台            <a href="https://www.cnblogs.com/haozi0804/p/12487767.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-03-13 17:34 wuch 阅读 (363) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12487767" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年3月6日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/03/06.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12431493.html">
+    openOPC与监控页面二
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：本文通过结合上一篇博文《openOPC与监控页面一》展现了如何通过通过一步一步实现UI端到OPC服务端数据刷新的技术验证过程，            <a href="https://www.cnblogs.com/haozi0804/p/12431493.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-03-06 23:32 wuch 阅读 (142) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12431493" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2020年3月5日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2020/03/05.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12420822.html">
+    openOPC与监控页面一
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：笔者涉猎的工业领域项目遇到一个需求，需要把底层设备（表记）的状态和运行数据集中放到一个监控画面进行展示，数据需要在界面端实时进行刷新，类似网友的例子，如下图（侵删） 数据需要实时主动刷新，笔者基于多年前在MES上做数据采集的经验，考虑使用OPC的通信协议来解决数据采集和刷新的问题。由于团队使用技术架            <a href="https://www.cnblogs.com/haozi0804/p/12420822.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2020-03-05 17:58 wuch 阅读 (305) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12420822" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2015年11月13日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2015/11/13.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/4794797.html">
+    Python开发入门与实战22-简单消息回复
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：22. 简单消息回复本章节我们来实现一个微信库存查询功能，使用我们前面的BIZ业务逻辑层示例如何利用微信入口来实现文本消息类的库存查询服务。22.1. 在responseMsg函数里增加处理微信文本推送的处理逻辑def responseMsg(postContent): postStr = s...            <a href="https://www.cnblogs.com/haozi0804/p/4794797.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2015-11-13 09:34 wuch 阅读 (1162) 评论 (0)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4794797" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2015年10月8日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2015/10/08.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/4794451.html">
+    Python开发入门与实战21-订阅事件(subscribe)
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：新用户关注微信公众平台，将产生一个订阅事件，即subscribe事件，在新用户关注公众平台后为新用户提供一些简明扼要的公众号说明。            <a href="https://www.cnblogs.com/haozi0804/p/4794451.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2015-10-08 09:46 wuch 阅读 (4900) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4794451" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+		
+<p class="date">
+	2015年9月14日		  
+	<a href="https://www.cnblogs.com/haozi0804/archive/2015/09/14.html"></a>
+</p>
+
+
+		<div class="post">
+			<h2>
+
+<a class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/4794428.html">
+    Python开发入门与实战20-微信开发配置
+</a>
+</h2>
+			
+			
+
+    <div class="c_b_p_desc">
+摘要：随着移动互联网时代的来临，微信已经成为移动互联网移动端的主要入口，现在很多的大型企业都有自己的微信服务号，如：银行业有自己的微银行，基金公司的公众服务号。通过微信入口可以方便快速的实现企业提供的服务。            <a href="https://www.cnblogs.com/haozi0804/p/4794428.html" class="c_b_p_desc_readmore">阅读全文</a>
+    </div>
+
+			
+			<p class="postfoot">		
+				
+
+posted @ 2015-09-14 09:53 wuch 阅读 (11092) 评论 (4)
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=4794428" rel="nofollow">
+    编辑
+</a>
+
+			</p>
+		</div>
+
+
+
+
+<div class="topicListFooter">
+    <div id="nav_next_page">
+        
+    <a href="https://www.cnblogs.com/haozi0804/default.html?page=2">
+        下一页
+    </a>
+
+    </div>    
+</div>
+
+
+
+
+
+
+
+
+</div>
+<div id="rightmenu">
+
+	
+<h3>My Links</h3>
+<ul>
+			<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+			<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/haozi0804/">
+首页</a>
+</li>
+			<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+			<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/wuch">
+联系</a></li>
+			<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/haozi0804/rss/">
+订阅</a> 
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/haozi0804/rss/">
+    <img src="/skins/cornflowerblue/images/xml.gif" alt="订阅" />
+</a></li>
+			<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+	<h3>Blog Stats</h3>
+	<ul>
+		<li>随笔 - 
+34</li>
+		<li>文章 - 
+0</li>
+		<li>评论 - 
+104</li>
+		<li>Trackbacks - 
+0</li>
+</ul>
+
+
+	
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+	<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+
+</div>
+
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	
+<a href="https://www.cnblogs.com/" id="Footer1_Hyperlink3" style="font-size: 12px; font-family: Verdana">博客园</a>
+	<br />
+	Copyright &copy; 2020 wuch
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</p>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta property="og:description" content="本小节继续演示如何在Django项目中采用早期websocket技术原型来实现把OPC服务端数据实时推送到UI端，让监控页面在另一种技术方式下，实时显示现场设备的工艺数据变化情况。本例我们仍然采用比较" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Python工业互联网监控项目实战3—websocket to UI - wuch - 博客园</title>
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=-oFz8B4m7JhHaZzdTkzPza2oLZNDRR8obnCz6w7OHbU" />
+    <link id="MainCss" rel="stylesheet" href="/skins/cornflowerblue/bundle-cornflowerblue.min.css?v=o43g26PBp8Ms0dvOnqAyf87bz7sWvlSxX_0z0-i39is" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/cornflowerblue/bundle-cornflowerblue-mobile.min.css?v=uSD3jCHs58esszylllmEPIWECeJUHRFeF8_GTJIdQVc" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/haozi0804/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/haozi0804/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/haozi0804/wlwmanifest.xml" />
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=uk-as-QYRHtjaAbeEigAktvhwf01NRrnle-6exg65Ak"></script>
+    <script>
+        var currentBlogId = 56977;
+        var currentBlogApp = 'haozi0804';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'CornflowerBlue';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="top">
+
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/haozi0804/">浩的博客</a>
+</h1>
+<p id="tagline">
+
+</p>
+
+
+</div>
+<div id="main">
+	<div id="post_detail">
+	<div class="post">
+	
+		<h2>
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/haozi0804/p/12725449.html">Python工业互联网监控项目实战3—websocket to UI</a>
+
+		</h2>
+		<div class="postbody">
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="font-family: 宋体;">　　本小节继续演示如何在</span>Django<span style="font-family: 宋体;">项目中采用</span>早期websocket<span style="font-family: 宋体;">技术</span>原型<span style="font-family: 宋体;">来实现把</span>OPC<span style="font-family: 宋体;">服务端数据实时推送到</span><span style="font-family: Calibri;">UI</span><span style="font-family: 宋体;">端，让监控页面</span>在另一种技术方式下，实时显示现场设备的工艺数据变化情况。本例我们仍然采用比较轻量级的dwebsocket组件。</p>
+<h4>1.&nbsp;<strong><span style="font-family: 宋体;">安装</span>dwebsocket<span style="font-family: 宋体;">组件</span></strong>&nbsp;</h4>
+<p>　　安装命令：<strong>pip install dwebsocket&nbsp;&nbsp;</strong></p>
+<p>1.1.&nbsp;<strong>dwebsocket<span style="font-family: 宋体;">使用方法</span></strong>&nbsp;</p>
+<p>　　如果你想为一个单独的视图处理一个websocket连接可以使用<span style="font-family: Calibri;">accept_websocket</span>装饰器，它会将标准的<span style="font-family: Calibri;">HTTP</span>请求路由到视图中。使用<span style="font-family: Calibri;">require_websocke</span>装饰器只允许使用<span style="font-family: Calibri;">WebSocket</span>连接，会拒绝正常的<span style="font-family: Calibri;">HTTP</span>请求。&nbsp;&nbsp;</p>
+<p>　　在设置中添加设置MIDDLEWARE_CLASSES=dwebsocket.middleware.WebSocketMiddleware这样会拒绝单独的视图使用websocket，必须加上<span style="font-family: Calibri;">accept_websocket </span>装饰器。&nbsp;</p>
+<p>&nbsp;　　设置WEBSOCKET_ACCEPT_ALL=True可以允许每一个单独的视图实用<span style="font-family: Calibri;">websockets</span></p>
+<p>&nbsp;1.2.&nbsp;<strong>常用方法和属性</strong></p>
+<p>　　1.request.is_websocket()　　如果是个websocket<span style="font-family: 宋体;">请求返回</span><span style="font-family: Calibri;">True</span><span style="font-family: 宋体;">，如果是个普通的</span><span style="font-family: Calibri;">http</span><span style="font-family: 宋体;">请求返回</span><span style="font-family: Calibri;">False,</span><span style="font-family: 宋体;">可以用这个方法区分它们。</span>&nbsp;</p>
+<p>　　2.request.websocket<span style="font-family: 宋体;">　　在一个</span>websocket<span style="font-family: 宋体;">请求建立之后，这个请求将会有一个</span><span style="font-family: Calibri;">websocket</span><span style="font-family: 宋体;">属性，用来给客户端提供一个简单的</span><span style="font-family: Calibri;">api</span><span style="font-family: 宋体;">通讯，如果</span><span style="font-family: Calibri;">request.is_websocket()</span><span style="font-family: 宋体;">是</span><span style="font-family: Calibri;">False</span><span style="font-family: 宋体;">，这个属性将是</span><span style="font-family: Calibri;">None</span><span style="font-family: 宋体;">。</span>&nbsp;</p>
+<p>　　3.WebSocket.wait()<span style="font-family: 宋体;">　　返回一个客户端发送的信息，在客户端关闭连接之前他不会返回任何值，这种情况下，方法将返回</span>None&nbsp;</p>
+<p>　　4.WebSocket.read()<span style="font-family: 宋体;">　　如果没有从客户端接收到新的消息，</span>read<span style="font-family: 宋体;">方法会返回一个新的消息，如果没有，就不返回。这是一个替代</span><span style="font-family: Calibri;">wait</span><span style="font-family: 宋体;">的非阻塞方法</span>&nbsp;</p>
+<p>&nbsp;　　5.WebSocket.count_messages()　　返回消息队列数量&nbsp;</p>
+<p>　　6.WebSocket.has_messages()<span style="font-family: 宋体;">　　如果有新消息返回</span>True<span style="font-family: 宋体;">，否则返回</span><span style="font-family: Calibri;">False</span>&nbsp;</p>
+<p>　　7.WebSocket.send(message)　　向客户端发送消息&nbsp;</p>
+<p>　　8.WebSocket.__iter__()　　websocket<span style="font-family: 宋体;">迭代器</span>&nbsp;</p>
+<p><strong>　　</strong>dwebsocket使用起来比较简单，增加一个简单的服务端url和重构UI代码；UI代码创建一个websocket连接并在onmessage 事件里处理返回的数据即可，不用花费多大的代价就能快速让监控页面升级到一个新的方式下，下面看代码演进吧。</p>
+<h4>2.<strong><span style="font-family: 宋体;">重构服务端代码</span>&mdash;&mdash;</strong><strong><span style="font-family: 宋体;">增加一个推送的</span>websocket url</strong></h4>
+<p>　　使用accept_websocket<span style="font-family: 宋体;">装饰器在</span>Collector APP<span style="font-family: 宋体;">的</span>views<span style="font-family: 宋体;">文件中增加一个</span>pushCollector<span style="font-family: 宋体;">的方法，实现</span>UI端连接上服务端后，服务端使用websocket主动向UI界面推送实时设备工艺数据，函数代码如下：</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">from</span> dwebsocket.decorators <span style="color: #0000ff;">import</span><span style="color: #000000;"> accept_websocket
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> OpenOPC
+@accept_websocket   
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> pushCollectorData(request):
+
+    tank4C9</span>=<span style="color: #000000;">{            
+        </span><span style="color: #800000;">'</span><span style="color: #800000;">DeviceId</span><span style="color: #800000;">'</span>: 1<span style="color: #000000;">,
+        </span><span style="color: #800000;">'</span><span style="color: #800000;">DeviceName</span><span style="color: #800000;">'</span>:<span style="color: #800000;">'</span><span style="color: #800000;">1#反应罐</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+        </span><span style="color: #800000;">'</span><span style="color: #800000;">Status</span><span style="color: #800000;">'</span>: 0, <span style="color: #008000;">#</span><span style="color: #008000;">设备运行状态</span>
+        <span style="color: #800000;">'</span><span style="color: #800000;">OverheadFlow</span><span style="color: #800000;">'</span>:0 ,<span style="color: #008000;">#</span><span style="color: #008000;">'顶流量',</span>
+        <span style="color: #800000;">'</span><span style="color: #800000;">ButtomsFlow</span><span style="color: #800000;">'</span>: 0, <span style="color: #008000;">#</span><span style="color: #008000;">'低流量'</span>
+        <span style="color: #800000;">'</span><span style="color: #800000;">Power</span><span style="color: #800000;">'</span>: 0, <span style="color: #008000;">#</span><span style="color: #008000;">功率</span>
+<span style="color: #000000;">    }
+    Collector</span>=<span style="color: #000000;">{
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">CollectorId</span><span style="color: #800000;">'</span>: 1<span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">CollectorName</span><span style="color: #800000;">'</span>:<span style="color: #800000;">'</span><span style="color: #800000;">1#采集器</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">Status</span><span style="color: #800000;">'</span><span style="color: #000000;">: 0,
+            </span><span style="color: #800000;">'</span><span style="color: #800000;">DeviceList</span><span style="color: #800000;">'</span><span style="color: #000000;">:[tank4C9],
+            } 
+    Collector</span>=<span style="color: #000000;">{
+         </span><span style="color: #800000;">'</span><span style="color: #800000;">CollectorId</span><span style="color: #800000;">'</span>: 1<span style="color: #000000;">,
+         </span><span style="color: #800000;">'</span><span style="color: #800000;">CollectorName</span><span style="color: #800000;">'</span>:<span style="color: #800000;">'</span><span style="color: #800000;">1#采集器</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+         </span><span style="color: #800000;">'</span><span style="color: #800000;">Status</span><span style="color: #800000;">'</span><span style="color: #000000;">: 0,
+         </span><span style="color: #800000;">'</span><span style="color: #800000;">DeviceList</span><span style="color: #800000;">'</span><span style="color: #000000;">:[tank4C9],
+         }  
+
+    </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> request.is_websocket():
+        </span><span style="color: #0000ff;">try</span><span style="color: #000000;">:
+            </span><span style="color: #0000ff;">while</span><span style="color: #000000;"> True:   
+
+                opc </span>=<span style="color: #000000;"> OpenOPC.client()
+                opc.connect(</span><span style="color: #800000;">'</span><span style="color: #800000;">Matrikon.OPC.Simulation</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+                tank4C9[</span><span style="color: #800000;">'</span><span style="color: #800000;">OverheadFlow</span><span style="color: #800000;">'</span>]= opc[<span style="color: #800000;">'</span><span style="color: #800000;">Random.Int1</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+                tank4C9[</span><span style="color: #800000;">'</span><span style="color: #800000;">ButtomsFlow</span><span style="color: #800000;">'</span>]= opc[<span style="color: #800000;">'</span><span style="color: #800000;">Random.Int2</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+                tank4C9[</span><span style="color: #800000;">'</span><span style="color: #800000;">Power</span><span style="color: #800000;">'</span>]= opc[<span style="color: #800000;">'</span><span style="color: #800000;">Random.Int4</span><span style="color: #800000;">'</span><span style="color: #000000;">]
+                opc.close()
+                request.websocket.send(\
+                    json.dumps( {</span><span style="color: #800000;">"</span><span style="color: #800000;">rows</span><span style="color: #800000;">"</span>:[Collector],<span style="color: #800000;">'</span><span style="color: #800000;">total</span><span style="color: #800000;">'</span>:1<span style="color: #000000;">}))
+                time.sleep(</span>2<span style="color: #000000;">)
+ 
+        </span><span style="color: #0000ff;">finally</span><span style="color: #000000;">:
+            client.disconnect()</span></pre>
+</div>
+<p><span style="font-size: 1em;">　　解读：上文代码与原来的主要差别就是从被动刷新（UI请求后）读去opc服务的tag位号值，变成间隔time.sleep(2)秒读取数据后通过request.websocket.send到UI端。</span></p>
+<p><span style="font-size: 1em;">3.&nbsp;</span><strong style="font-size: 1em;">重构</strong><strong style="font-size: 1em;">UI<span style="font-family: 宋体;">端代码</span></strong></p>
+<p>&nbsp;　　<span style="font-family: 宋体;">这里</span>django<span style="font-family: 宋体;">与</span><span style="font-family: Calibri;">Flask</span><span style="font-family: 宋体;">的差别就是无须新建一个新的项目，当前项目我们就可以</span><span style="font-family: 宋体;">通过重构</span>tank4C9.html页面代码来使用websocket实时推送功能。</p>
+<p>　　<span style="font-family: 宋体;">重构后</span>tank4C9.html代码如下：&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;&lt;</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">title</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script </span><span style="color: #ff0000;">src</span><span style="color: #0000ff;">="https://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"</span><span style="color: #0000ff;">&gt;&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">head</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+        Status:    </span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">strong </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="divStatus"</span><span style="color: #0000ff;">&gt;</span>0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">strong</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+        OverheadFlow:    </span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">strong </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="divOverheadFlow"</span><span style="color: #0000ff;">&gt;</span>0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">strong</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+        ButtomsFlow:    </span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">strong </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="divButtomsFlow"</span><span style="color: #0000ff;">&gt;</span>0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">strong</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+        Power:    </span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">strong </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="divPower"</span><span style="color: #0000ff;">&gt;</span>0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">strong</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span><span style="color: #000000;">
+        pushCount:    </span><span style="color: #0000ff;">&lt;</span><span style="color: #800000;">strong </span><span style="color: #ff0000;">id</span><span style="color: #0000ff;">="divpushCount"</span><span style="color: #0000ff;">&gt;</span>0<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">strong</span><span style="color: #0000ff;">&gt;</span>
+    <span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">div</span><span style="color: #0000ff;">&gt;</span>
+
+
+    <span style="color: #0000ff;">&lt;</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+        <span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">JQuery 代码入口</span>
+<span style="background-color: #f5f5f5; color: #000000;">        $(document).ready(</span><span style="background-color: #f5f5f5; color: #0000ff;">function</span><span style="background-color: #f5f5f5; color: #000000;">(){
+ 
+
+            </span><span style="background-color: #f5f5f5; color: #0000ff;">if</span><span style="background-color: #f5f5f5; color: #000000;"> (</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">WebSocket</span><span style="background-color: #f5f5f5; color: #000000;">"</span> <span style="background-color: #f5f5f5; color: #0000ff;">in</span><span style="background-color: #f5f5f5; color: #000000;"> window) {
+                </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;">连接server--TagCurValue</span>
+                <span style="background-color: #f5f5f5; color: #0000ff;">var</span><span style="background-color: #f5f5f5; color: #000000;"> ws </span><span style="background-color: #f5f5f5; color: #000000;">=</span> <span style="background-color: #f5f5f5; color: #0000ff;">new</span><span style="background-color: #f5f5f5; color: #000000;"> WebSocket(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">ws://127.0.0.1:8090/pushCollector/</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">);
+                ws.onmessage </span><span style="background-color: #f5f5f5; color: #000000;">=</span> <span style="background-color: #f5f5f5; color: #0000ff;">function</span><span style="background-color: #f5f5f5; color: #000000;"> (evt) {
+                    </span><span style="background-color: #f5f5f5; color: #008000;">//</span><span style="background-color: #f5f5f5; color: #008000;"> 接收数据</span>
+<span style="background-color: #f5f5f5; color: #000000;">                    d </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> JSON.parse(evt.data);
+                    collector</span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> d.rows[</span><span style="background-color: #f5f5f5; color: #000000;">0</span><span style="background-color: #f5f5f5; color: #000000;">]
+                    </span><span style="background-color: #f5f5f5; color: #0000ff;">for</span><span style="background-color: #f5f5f5; color: #000000;"> (i </span><span style="background-color: #f5f5f5; color: #000000;">=</span> <span style="background-color: #f5f5f5; color: #000000;">0</span><span style="background-color: #f5f5f5; color: #000000;">; i </span><span style="background-color: #f5f5f5; color: #000000;">&lt;</span><span style="background-color: #f5f5f5; color: #000000;"> collector.DeviceList.length; i</span><span style="background-color: #f5f5f5; color: #000000;">++</span><span style="background-color: #f5f5f5; color: #000000;">){
+                        device </span><span style="background-color: #f5f5f5; color: #000000;">=</span><span style="background-color: #f5f5f5; color: #000000;"> collector.DeviceList[i]
+                        $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#divStatus</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(device.Status);
+                        $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#divOverheadFlow</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(device.OverheadFlow);
+                        $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#divButtomsFlow</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(device.ButtomsFlow);
+                        $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#divPower</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(device.Power);
+                        $(</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">#divpushCount</span><span style="background-color: #f5f5f5; color: #000000;">"</span><span style="background-color: #f5f5f5; color: #000000;">).html(device.Count);
+
+                    }                   
+
+                };
+            } 
+        });
+
+    </span><span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">script</span><span style="color: #0000ff;">&gt;</span>
+
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">body</span><span style="color: #0000ff;">&gt;</span>
+<span style="color: #0000ff;">&lt;/</span><span style="color: #800000;">html</span><span style="color: #0000ff;">&gt;</span></pre>
+</div>
+<p>&nbsp;<strong>　　</strong>解读：UI端代码通过ws.onmessage事件更新页面显示，对照上一张的ajax轮询模式的代码，代码的主体结构和功能并没有大的变化，只是采用了一种的新的数据传递方式而已。</p>
+<p><strong>　　注意</strong><strong>：</strong>&nbsp;</p>
+<p>　　var&nbsp;ws = new&nbsp;WebSocket("ws://127.0.0.1:8090/pushCollector/");</p>
+<p>　　pushCollector/&nbsp;url<span style="font-family: 宋体;">最后那个&ldquo;</span>/&rdquo;，这个点是<span style="font-family: Consolas;">django</span><span style="font-family: 宋体;">与</span><span style="font-family: Consolas;">flask</span><span style="font-family: 宋体;">的一个差别，否则我们创建这个</span><span style="font-family: Consolas;">websocket</span><span style="font-family: 宋体;">时会收到</span><span style="font-family: Consolas;">301</span><span style="font-family: 宋体;">错误提示！</span>&nbsp;</p>
+<p><strong>4. 发布pushCollectorData url</strong></p>
+<p><span style="font-family: 宋体;">　　项目的</span>urls<span style="font-family: 宋体;">发布这新的</span><span style="font-family: Calibri;">url</span><span style="font-family: 宋体;">接口地址，这例我们保留原来的getCollectorData，代码如下：</span>&nbsp;</p>
+<div class="cnblogs_code">
+<pre><span style="color: #008000;">#</span><span style="color: #008000;"> Uncomment next two lines to enable admin:</span><span style="color: #008000;">
+#</span><span style="color: #008000;">from django.contrib import admin</span>
+
+<span style="color: #0000ff;">from</span> django.urls <span style="color: #0000ff;">import</span><span style="color: #000000;"> path
+</span><span style="color: #0000ff;">from</span> Collector <span style="color: #0000ff;">import</span><span style="color: #000000;"> views
+
+urlpatterns </span>=<span style="color: #000000;"> [
+    </span><span style="color: #008000;">#</span><span style="color: #008000;"> Uncomment the next line to enable the admin:</span>
+    <span style="color: #008000;">#</span><span style="color: #008000;">path('admin/', admin.site.urls)</span>
+<span style="color: #000000;">
+    path(</span><span style="color: #800000;">'</span><span style="color: #800000;">tank4C9/</span><span style="color: #800000;">'</span><span style="color: #000000;">, views.tank4C9),
+    path(</span><span style="color: #800000;">'</span><span style="color: #800000;">getCollectorData/</span><span style="color: #800000;">'</span><span style="color: #000000;">, views.getCollectorData),
+    path(</span><span style="color: #800000;">'</span><span style="color: #800000;">pushCollectorData/</span><span style="color: #800000;">'</span><span style="color: #000000;">, views.pushCollectorData),
+    
+]</span></pre>
+</div>
+<h3>4. 调试<strong>运行</strong><strong>效果</strong></h3>
+<p><strong><img src="https://img2020.cnblogs.com/blog/67400/202004/67400-20200418130315962-1721865501.png" alt="" /></strong></p>
+<h3>5.&nbsp;<strong>小结</strong></h3>
+<p>　　<span style="font-family: 宋体;">本小节我们通过websocket的主动推送方式，完成了实时监控画面从后台服务端主动推送到UI端的技术架构迭代，这个过程我们也演示了项目迭代的方式，迭代推进项目功能点的好处非常明显也就是在一个版本满足需求的前提下，可以相对从容的采用新的技术和方案升级产品改进性能。</span></p>
+<p><span style="font-family: 宋体;">　　例子我们保留了原来的getCollectorData url，实际的项目开发也是通过增加新推送方法的方式来组织进行的，这样新的升级也同时满足原有ajax模式的后台访问方式。从而避免升级过程中，前后台升级版本不一致导致原有页面不能正常访问，避免系统已发布就&ldquo;崩溃&rdquo;的&ldquo;灾难&rdquo;问题。</span></p>
+<p><span style="font-family: 宋体;">　　这里多说一下敏捷编程下的&ldquo;小步快跑，快速迭代&rdquo;模式下，一些团队遇到的问题就是一开始极简设计满足当下要求，然后在不断功能迭代过程中项目产品架构技术快速老化，可是团队还是不断的增加功能点，而没有人员关心技术架构优化和调整。最终，导致问题越积越多，架构越来越难用，产品构建越来越慢，最后等待一次彻底的项目&ldquo;重构&rdquo;。一些&ldquo;好的&rdquo;项目应该在过程中逐步演化代码结构来满足不断扩张的功能需求。</span></p>
+<p><span style="font-family: 宋体;">　　敏捷编程的前提是要有一套体系来做保证的，需求管理、代码重构、单元测试等等，比如：代码重构在敏捷编程项目过程中就非常重要，一开始简单满足需求，一旦发现引入新的需求代码不能很好的满足需求的变化时，引入好的设计模式，采用代码重构的方式来优化代码结构，并通过回归单元测试来保证新的代码结构能够正常通过原来的单元测试。盲目的采用敏捷编程又没有采用它有效管理的一整套机制，最后陷入项目泥潭的，只能说是没有理解好&ldquo;敏捷&rdquo;的核心要素罢了。</span></p>
+<p><span style="font-family: 宋体;">&nbsp;</span></p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div></div>
+		<p class="postfoot">
+			posted on 
+<span id="post-date">2020-04-20 08:44</span>&nbsp;
+<a href="https://www.cnblogs.com/haozi0804/">wuch</a>&nbsp;
+阅读(<span id="post_view_count">...</span>)&nbsp;
+评论(<span id="post_comment_count">...</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=12725449" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(12725449);return false;">收藏</a>
+		</p>
+	</div>
+	
+	
+<script src="https://common.cnblogs.com/highlight/9.12.0/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 56977, cb_blogApp = 'haozi0804', cb_blogUserGuid = '3efaa660-c547-de11-9510-001cf0cd104b';
+    var cb_entryId = 12725449, cb_entryCreatedDate = '2020-04-20 08:44', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="async" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script>
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+    </script>
+    <script>
+        googletag.cmd.push(function () {
+            googletag.defineSlot("/1090369/C1", [300, 250], "div-gpt-ad-1546353474406-0").addService(googletag.pubads());
+            googletag.defineSlot("/1090369/C2", [468, 60], "div-gpt-ad-1539008685004-0").addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1546353474406-0" style="height:250px; width:300px;"></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1539008685004-0" style="height:60px; width:468px;">
+            <script>
+                if (new Date() >= new Date(2018, 9, 13)) {
+                    googletag.cmd.push(function () { googletag.display("div-gpt-ad-1539008685004-0"); });
+                }
+            </script>
+        </div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div></div>
+
+
+</div>
+<div id="rightmenu">
+
+	
+<h3>My Links</h3>
+<ul>
+			<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+			<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/haozi0804/">
+首页</a>
+</li>
+			<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+			<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/wuch">
+联系</a></li>
+			<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/haozi0804/rss/">
+订阅</a> 
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/haozi0804/rss/">
+    <img src="/skins/cornflowerblue/images/xml.gif" alt="订阅" />
+</a></li>
+			<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+	<h3>Blog Stats</h3>
+	<ul>
+		<li>随笔 - 
+34</li>
+		<li>文章 - 
+0</li>
+		<li>评论 - 
+104</li>
+		<li>Trackbacks - 
+0</li>
+</ul>
+
+
+	
+<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+
+	<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+
+</div>
+
+<p id="footer">
+	Powered by: 
+	<br />
+	
+	
+<a href="https://www.cnblogs.com/" id="Footer1_Hyperlink3" style="font-size: 12px; font-family: Verdana">博客园</a>
+	<br />
+	Copyright &copy; 2020 wuch
+<br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+</p>
+
+
+
+
+    
+</body>
+</html>
